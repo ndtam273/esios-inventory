@@ -8,10 +8,24 @@
 
 import UIKit
 
-class TabbarController: BaseTabBarController {
-
+class TabbarController: BaseViewController {
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet var buttons: [UIButton]!
+    
+    var productViewController: ProductViewController!
+    var usersViewController: UsersViewController!
+    var ordersViewController: OrdersViewController!
+    
+    var viewControllers = [UIViewController]?.self
+    
+    var selectedIndex: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        productViewController = ProductViewController(nibName: "ProductViewController", bundle: nil)
+        usersViewController = UsersViewController(nibName: "UsersViewController", bundle: nil)
+        ordersViewController = OrdersViewController(nibName: "OrdersViewController", bundle: nil)
+        viewControllers = [productViewController, usersViewController, ordersViewController]
 
         // Do any additional setup after loading the view.
     }
