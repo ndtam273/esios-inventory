@@ -1,0 +1,6 @@
+framework module Pods_es_inventory {
+  umbrella header "Pods-es-inventory-umbrella.h"
+
+  export *
+  module * { export * }
+}
