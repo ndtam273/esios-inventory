@@ -11,5 +11,7 @@ extension App.Text {
     //Information app
     static var appName = "Project Template"
     static var titleHome = "Products"
+    static var titleOrders = "Orders"
+    static var titleUsers = "Users"
     //...
 }

@@ -19,6 +19,13 @@
 		F7048F3E254A73C4005509FC /* Data.Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7048F3D254A73C4005509FC /* Data.Ext.swift */; };
 		F7048F42254A73E5005509FC /* Color.Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7048F41254A73E5005509FC /* Color.Ext.swift */; };
 		F7048F45254A7412005509FC /* String.Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7048F44254A7412005509FC /* String.Ext.swift */; };
+		F7048F5F254AA13B005509FC /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7048F5D254AA13B005509FC /* UsersViewController.swift */; };
+		F7048F60254AA13B005509FC /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7048F5E254AA13B005509FC /* UsersViewController.xib */; };
+		F7048F65254AA14A005509FC /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7048F63254AA14A005509FC /* OrdersViewController.swift */; };
+		F7048F66254AA14A005509FC /* OrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7048F64254AA14A005509FC /* OrdersViewController.xib */; };
+		F7048F6A254AA8D8005509FC /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7048F69254AA8D8005509FC /* TabItem.swift */; };
+		F7048F6F254AAC7A005509FC /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7048F6D254AAC7A005509FC /* TabbarController.swift */; };
+		F7048F70254AAC7A005509FC /* TabbarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7048F6E254AAC7A005509FC /* TabbarController.xib */; };
 		F7775B3A2549207B00858774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7775B392549207B00858774 /* AppDelegate.swift */; };
 		F7775B3C2549207B00858774 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7775B3B2549207B00858774 /* SceneDelegate.swift */; };
 		F7775B432549207D00858774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7775B422549207D00858774 /* Assets.xcassets */; };
@@ -47,6 +54,13 @@
 		F7048F3D254A73C4005509FC /* Data.Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.Ext.swift; sourceTree = "<group>"; };
 		F7048F41254A73E5005509FC /* Color.Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.Ext.swift; sourceTree = "<group>"; };
 		F7048F44254A7412005509FC /* String.Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.Ext.swift; sourceTree = "<group>"; };
+		F7048F5D254AA13B005509FC /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		F7048F5E254AA13B005509FC /* UsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
+		F7048F63254AA14A005509FC /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		F7048F64254AA14A005509FC /* OrdersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdersViewController.xib; sourceTree = "<group>"; };
+		F7048F69254AA8D8005509FC /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabItem.swift; path = "es-inventory/Controllers/Orders/TabItem.swift"; sourceTree = SOURCE_ROOT; };
+		F7048F6D254AAC7A005509FC /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		F7048F6E254AAC7A005509FC /* TabbarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabbarController.xib; sourceTree = "<group>"; };
 		F7775B362549207B00858774 /* es-inventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "es-inventory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7775B392549207B00858774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7775B3B2549207B00858774 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +108,6 @@
 		F7048F1A254A6986005509FC /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F7048F27254A6D29005509FC /* Common */,
 				F7048F22254A6CC9005509FC /* Cells */,
 				F7048F1B254A69D9005509FC /* ProductViewController.swift */,
 				F7048F1C254A69D9005509FC /* ProductViewController.xib */,
@@ -106,6 +119,7 @@
 		F7048F20254A6C9A005509FC /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				F7048F69254AA8D8005509FC /* TabItem.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -181,6 +195,33 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		F7048F5B254AA111005509FC /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				F7048F5D254AA13B005509FC /* UsersViewController.swift */,
+				F7048F5E254AA13B005509FC /* UsersViewController.xib */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		F7048F5C254AA11B005509FC /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				F7048F63254AA14A005509FC /* OrdersViewController.swift */,
+				F7048F64254AA14A005509FC /* OrdersViewController.xib */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		F7048F6C254AABDF005509FC /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				F7048F6D254AAC7A005509FC /* TabbarController.swift */,
+				F7048F6E254AAC7A005509FC /* TabbarController.xib */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
 		F7775B2D2549207B00858774 = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +278,9 @@
 		F7775B5325492B8800858774 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F7048F6C254AABDF005509FC /* Tabbar */,
+				F7048F5C254AA11B005509FC /* Orders */,
+				F7048F5B254AA111005509FC /* Users */,
 				F7048F1A254A6986005509FC /* Home */,
 				F7775B5F2549380600858774 /* Base */,
 			);
@@ -246,6 +290,7 @@
 		F7775B5425492BA200858774 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F7048F27254A6D29005509FC /* Common */,
 				F7048F20254A6C9A005509FC /* Custom */,
 			);
 			path = Views;
@@ -344,8 +389,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7775B462549207D00858774 /* LaunchScreen.storyboard in Resources */,
+				F7048F60254AA13B005509FC /* UsersViewController.xib in Resources */,
 				F7048F1E254A69D9005509FC /* ProductViewController.xib in Resources */,
 				F7775B432549207D00858774 /* Assets.xcassets in Resources */,
+				F7048F66254AA14A005509FC /* OrdersViewController.xib in Resources */,
+				F7048F70254AAC7A005509FC /* TabbarController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7775B3A2549207B00858774 /* AppDelegate.swift in Sources */,
+				F7048F6F254AAC7A005509FC /* TabbarController.swift in Sources */,
 				F7048F3A254A7310005509FC /* DataManager.swift in Sources */,
 				F7775B5C2549377100858774 /* App.Text.swift in Sources */,
 				F7048F37254A724A005509FC /* Music.swift in Sources */,
@@ -408,6 +457,8 @@
 				F7048F2D254A6DB8005509FC /* Label.swift in Sources */,
 				F7048F33254A7215005509FC /* User.swift in Sources */,
 				F7048F45254A7412005509FC /* String.Ext.swift in Sources */,
+				F7048F6A254AA8D8005509FC /* TabItem.swift in Sources */,
+				F7048F65254AA14A005509FC /* OrdersViewController.swift in Sources */,
 				F7775B632549384D00858774 /* BaseNavigationController.swift in Sources */,
 				F7048F3E254A73C4005509FC /* Data.Ext.swift in Sources */,
 				F7048F24254A6CEF005509FC /* ProductViewModel.swift in Sources */,
@@ -415,6 +466,7 @@
 				F7775B612549381700858774 /* BaseViewController.swift in Sources */,
 				F7775B5E254937BE00858774 /* App.Color.swift in Sources */,
 				F7048F1D254A69D9005509FC /* ProductViewController.swift in Sources */,
+				F7048F5F254AA13B005509FC /* UsersViewController.swift in Sources */,
 				F7048F42254A73E5005509FC /* Color.Ext.swift in Sources */,
 				F7775B3C2549207B00858774 /* SceneDelegate.swift in Sources */,
 			);
