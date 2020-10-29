@@ -10,6 +10,6 @@ import Foundation
 extension App.Text {
     //Information app
     static var appName = "Project Template"
-    
+    static var titleHome = "Products"
     //...
 }
