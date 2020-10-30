@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrdersViewController" customModule="es_inventory" customModuleProvider="target">
             <connections>
@@ -19,23 +24,76 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jws-wd-q16">
-                    <rect key="frame" x="180.5" y="437.5" width="53" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2O-lG-kDb">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMj-cx-dtH">
+                            <rect key="frame" x="16" y="11.5" width="73" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="MNm-PF-ldm"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
+                            <color key="textColor" red="0.094117647060000004" green="0.56470588239999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="XMj-cx-dtH" firstAttribute="centerY" secondItem="h2O-lG-kDb" secondAttribute="centerY" id="DeL-tO-rkZ"/>
+                        <constraint firstItem="XMj-cx-dtH" firstAttribute="leading" secondItem="h2O-lG-kDb" secondAttribute="leading" constant="16" id="OmN-Xj-vd4"/>
+                        <constraint firstAttribute="height" constant="44" id="TY9-Or-cp2"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A1a-2E-eUC">
+                    <rect key="frame" x="16" y="100" width="382" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_form" translatesAutoresizingMaskIntoConstraints="NO" id="CBu-E8-1Fd">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LXz-wU-iXB">
+                            <rect key="frame" x="20" y="0.0" width="312" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hK-ym-nnB">
+                            <rect key="frame" x="332" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="7Nl-Pt-Y0F"/>
+                            </constraints>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="7hK-ym-nnB" firstAttribute="top" secondItem="A1a-2E-eUC" secondAttribute="top" id="2u0-bg-0nS"/>
+                        <constraint firstItem="CBu-E8-1Fd" firstAttribute="leading" secondItem="A1a-2E-eUC" secondAttribute="leading" id="9Xq-RF-1p6"/>
+                        <constraint firstAttribute="bottom" secondItem="CBu-E8-1Fd" secondAttribute="bottom" id="Cju-tn-rEl"/>
+                        <constraint firstItem="CBu-E8-1Fd" firstAttribute="top" secondItem="A1a-2E-eUC" secondAttribute="top" id="E30-ug-lHX"/>
+                        <constraint firstAttribute="trailing" secondItem="CBu-E8-1Fd" secondAttribute="trailing" id="IGW-63-u4f"/>
+                        <constraint firstAttribute="bottom" secondItem="LXz-wU-iXB" secondAttribute="bottom" id="YAC-xF-E8d"/>
+                        <constraint firstItem="LXz-wU-iXB" firstAttribute="top" secondItem="A1a-2E-eUC" secondAttribute="top" id="eaX-2E-Dpi"/>
+                        <constraint firstAttribute="height" constant="50" id="fFe-cT-Wz9"/>
+                        <constraint firstAttribute="trailing" secondItem="7hK-ym-nnB" secondAttribute="trailing" id="gSd-2v-ayU"/>
+                        <constraint firstAttribute="bottom" secondItem="7hK-ym-nnB" secondAttribute="bottom" id="n6N-ci-FD2"/>
+                        <constraint firstItem="LXz-wU-iXB" firstAttribute="leading" secondItem="A1a-2E-eUC" secondAttribute="leading" constant="20" id="rQ6-M7-vgV"/>
+                        <constraint firstItem="7hK-ym-nnB" firstAttribute="leading" secondItem="LXz-wU-iXB" secondAttribute="trailing" id="sST-A0-eI4"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Jws-wd-q16" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DLa-Lm-Ddq"/>
-                <constraint firstItem="Jws-wd-q16" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="vpQ-zR-hcH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="h2O-lG-kDb" secondAttribute="top" id="6b3-Y4-BTR"/>
+                <constraint firstItem="h2O-lG-kDb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Gbu-7S-lOB"/>
+                <constraint firstItem="A1a-2E-eUC" firstAttribute="top" secondItem="h2O-lG-kDb" secondAttribute="bottom" constant="12" id="KS2-OY-Vgp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="A1a-2E-eUC" secondAttribute="trailing" constant="16" id="OJI-ZR-L5A"/>
+                <constraint firstAttribute="trailing" secondItem="h2O-lG-kDb" secondAttribute="trailing" id="Zoe-hW-gCE"/>
+                <constraint firstItem="A1a-2E-eUC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dra-pI-sBG"/>
             </constraints>
-            <point key="canvasLocation" x="141" y="55"/>
+            <point key="canvasLocation" x="140.57971014492756" y="54.910714285714285"/>
         </view>
     </objects>
     <resources>
+        <image name="search_form" width="375" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

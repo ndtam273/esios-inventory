@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductViewController" customModule="es_inventory" customModuleProvider="target">
             <connections>
@@ -19,23 +24,76 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="products" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkx-Nk-hEc">
-                    <rect key="frame" x="172.5" y="437.5" width="69" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EG2-ej-Xcf">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Products" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogC-pG-xhC">
+                            <rect key="frame" x="16" y="11.5" width="97.5" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="24s-PB-jlJ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
+                            <color key="textColor" red="0.094117647058823528" green="0.56470588235294117" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="ogC-pG-xhC" firstAttribute="centerY" secondItem="EG2-ej-Xcf" secondAttribute="centerY" id="Nd2-zW-me8"/>
+                        <constraint firstItem="ogC-pG-xhC" firstAttribute="leading" secondItem="EG2-ej-Xcf" secondAttribute="leading" constant="16" id="gNi-S5-ekC"/>
+                        <constraint firstAttribute="height" constant="44" id="gh7-7y-8uZ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gqi-5Z-Qwm">
+                    <rect key="frame" x="16" y="100" width="382" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_form" translatesAutoresizingMaskIntoConstraints="NO" id="Y4z-9M-xh6">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXg-Hc-0N2">
+                            <rect key="frame" x="20" y="0.0" width="312" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1t-gi-G1k">
+                            <rect key="frame" x="332" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="3Za-ou-Us7"/>
+                            </constraints>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Y4z-9M-xh6" secondAttribute="trailing" id="5RM-pi-c6e"/>
+                        <constraint firstAttribute="bottom" secondItem="Y4z-9M-xh6" secondAttribute="bottom" id="7Kv-xE-vgH"/>
+                        <constraint firstItem="C1t-gi-G1k" firstAttribute="top" secondItem="Gqi-5Z-Qwm" secondAttribute="top" id="Ieh-Ru-3wd"/>
+                        <constraint firstAttribute="height" constant="50" id="JQl-dI-HJb"/>
+                        <constraint firstItem="IXg-Hc-0N2" firstAttribute="top" secondItem="Gqi-5Z-Qwm" secondAttribute="top" id="Spc-88-AbA"/>
+                        <constraint firstItem="IXg-Hc-0N2" firstAttribute="leading" secondItem="Gqi-5Z-Qwm" secondAttribute="leading" constant="20" id="T9U-Ta-E7C"/>
+                        <constraint firstItem="C1t-gi-G1k" firstAttribute="leading" secondItem="IXg-Hc-0N2" secondAttribute="trailing" id="bPa-2U-2jy"/>
+                        <constraint firstItem="Y4z-9M-xh6" firstAttribute="top" secondItem="Gqi-5Z-Qwm" secondAttribute="top" id="bf1-Cm-hPt"/>
+                        <constraint firstAttribute="bottom" secondItem="IXg-Hc-0N2" secondAttribute="bottom" id="dwy-8b-MPG"/>
+                        <constraint firstAttribute="bottom" secondItem="C1t-gi-G1k" secondAttribute="bottom" id="gQu-Se-MhN"/>
+                        <constraint firstItem="Y4z-9M-xh6" firstAttribute="leading" secondItem="Gqi-5Z-Qwm" secondAttribute="leading" id="jFw-KB-WuK"/>
+                        <constraint firstAttribute="trailing" secondItem="C1t-gi-G1k" secondAttribute="trailing" id="oR8-fq-6ot"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Rkx-Nk-hEc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Pqf-pr-AJW"/>
-                <constraint firstItem="Rkx-Nk-hEc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yKa-1r-meR"/>
+                <constraint firstAttribute="trailing" secondItem="EG2-ej-Xcf" secondAttribute="trailing" id="AJj-vn-7mm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="EG2-ej-Xcf" secondAttribute="top" id="Jfp-Ol-fbc"/>
+                <constraint firstItem="EG2-ej-Xcf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Uvy-WW-Zxg"/>
+                <constraint firstItem="Gqi-5Z-Qwm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Wdh-OB-cNI"/>
+                <constraint firstAttribute="trailing" secondItem="Gqi-5Z-Qwm" secondAttribute="trailing" constant="16" id="fvN-zP-qhg"/>
+                <constraint firstItem="Gqi-5Z-Qwm" firstAttribute="top" secondItem="EG2-ej-Xcf" secondAttribute="bottom" constant="12" id="zRa-gh-9wT"/>
             </constraints>
-            <point key="canvasLocation" x="141" y="74"/>
+            <point key="canvasLocation" x="140.57971014492756" y="73.660714285714278"/>
         </view>
     </objects>
     <resources>
+        <image name="search_form" width="375" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

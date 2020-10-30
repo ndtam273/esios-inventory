@@ -61,6 +61,9 @@
 		F7048F69254AA8D8005509FC /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabItem.swift; path = "es-inventory/Controllers/Orders/TabItem.swift"; sourceTree = SOURCE_ROOT; };
 		F7048F6D254AAC7A005509FC /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		F7048F6E254AAC7A005509FC /* TabbarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabbarController.xib; sourceTree = "<group>"; };
+		F74C0220254BF02A000918C4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		F74C0221254BF02A000918C4 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		F74C0223254BF11B000918C4 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		F7775B362549207B00858774 /* es-inventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "es-inventory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7775B392549207B00858774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7775B3B2549207B00858774 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +194,9 @@
 		F7048F49254A7456005509FC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				F74C0223254BF11B000918C4 /* Roboto-Italic.ttf */,
+				F74C0220254BF02A000918C4 /* Roboto-Bold.ttf */,
+				F74C0221254BF02A000918C4 /* Roboto-Medium.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";

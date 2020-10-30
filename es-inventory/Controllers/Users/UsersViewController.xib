@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UsersViewController" customModule="es_inventory" customModuleProvider="target">
             <connections>
@@ -19,23 +24,76 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIj-KY-znn">
-                    <rect key="frame" x="184.5" y="437.5" width="45" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fx9-ac-6Df">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdL-de-DK5">
+                            <rect key="frame" x="16" y="11.5" width="62.5" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="WhE-6W-Pnp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
+                            <color key="textColor" red="0.094117647060000004" green="0.56470588239999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="mdL-de-DK5" firstAttribute="leading" secondItem="Fx9-ac-6Df" secondAttribute="leading" constant="16" id="IyC-0O-yEC"/>
+                        <constraint firstAttribute="height" constant="44" id="cvg-vH-hQt"/>
+                        <constraint firstItem="mdL-de-DK5" firstAttribute="centerY" secondItem="Fx9-ac-6Df" secondAttribute="centerY" id="uf8-JG-nwf"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="doc-vo-4SA">
+                    <rect key="frame" x="16" y="100" width="382" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_form" translatesAutoresizingMaskIntoConstraints="NO" id="YQ9-Iq-E2e">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D8K-CK-CHf">
+                            <rect key="frame" x="20" y="0.0" width="312" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWo-TR-ep6">
+                            <rect key="frame" x="332" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="BBP-8q-sfa"/>
+                            </constraints>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="YQ9-Iq-E2e" firstAttribute="top" secondItem="doc-vo-4SA" secondAttribute="top" id="0tQ-7e-g7C"/>
+                        <constraint firstAttribute="bottom" secondItem="sWo-TR-ep6" secondAttribute="bottom" id="2wQ-cr-pbv"/>
+                        <constraint firstItem="D8K-CK-CHf" firstAttribute="leading" secondItem="doc-vo-4SA" secondAttribute="leading" constant="20" id="5Qy-gg-Wx2"/>
+                        <constraint firstItem="sWo-TR-ep6" firstAttribute="top" secondItem="doc-vo-4SA" secondAttribute="top" id="OsV-ml-vxC"/>
+                        <constraint firstAttribute="trailing" secondItem="sWo-TR-ep6" secondAttribute="trailing" id="Pcg-mh-x2e"/>
+                        <constraint firstAttribute="bottom" secondItem="D8K-CK-CHf" secondAttribute="bottom" id="TYz-ZW-V5V"/>
+                        <constraint firstAttribute="bottom" secondItem="YQ9-Iq-E2e" secondAttribute="bottom" id="Tvq-m4-Jpn"/>
+                        <constraint firstItem="sWo-TR-ep6" firstAttribute="leading" secondItem="D8K-CK-CHf" secondAttribute="trailing" id="U3a-b9-O8i"/>
+                        <constraint firstItem="D8K-CK-CHf" firstAttribute="top" secondItem="doc-vo-4SA" secondAttribute="top" id="dPD-8w-JHB"/>
+                        <constraint firstAttribute="trailing" secondItem="YQ9-Iq-E2e" secondAttribute="trailing" id="dvO-5i-7WB"/>
+                        <constraint firstItem="YQ9-Iq-E2e" firstAttribute="leading" secondItem="doc-vo-4SA" secondAttribute="leading" id="e5K-A2-ZEL"/>
+                        <constraint firstAttribute="height" constant="50" id="j8l-wk-IbP"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="iIj-KY-znn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Msz-5y-Grb"/>
-                <constraint firstItem="iIj-KY-znn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZgM-8Y-FhN"/>
+                <constraint firstAttribute="trailing" secondItem="Fx9-ac-6Df" secondAttribute="trailing" id="6oe-Dx-c70"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="Fx9-ac-6Df" secondAttribute="top" id="Mb5-fk-Npw"/>
+                <constraint firstAttribute="trailing" secondItem="doc-vo-4SA" secondAttribute="trailing" constant="16" id="Qfj-Xc-fXw"/>
+                <constraint firstItem="Fx9-ac-6Df" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Uhi-fs-4iz"/>
+                <constraint firstItem="doc-vo-4SA" firstAttribute="top" secondItem="Fx9-ac-6Df" secondAttribute="bottom" constant="12" id="hzN-IO-aNS"/>
+                <constraint firstItem="doc-vo-4SA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="mJt-RG-ro0"/>
             </constraints>
             <point key="canvasLocation" x="141" y="55"/>
         </view>
     </objects>
     <resources>
+        <image name="search_form" width="375" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
