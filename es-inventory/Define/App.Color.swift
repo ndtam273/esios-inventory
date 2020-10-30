@@ -12,6 +12,6 @@ extension App.Color {
     static var mainColor = UIColor.lightGray
     static var textColor = UIColor.black
     static var titleColor = UIColor.blue
-    
-    //....
+    static var tintColor = UIColor.init(red: 24/255, green: 144/255, blue: 255/255, alpha: 255/255)
+
 }
