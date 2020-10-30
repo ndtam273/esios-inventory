@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -25,16 +25,16 @@
                     <rect key="frame" x="0.0" y="836" width="414" height="60"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="vYL-GL-qUK">
-                            <rect key="frame" x="62" y="22.333333333333371" width="290.33333333333331" height="15.333333333333336"/>
+                            <rect key="frame" x="61.5" y="22.5" width="291" height="15.5"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Cx-YN-4vi">
-                                    <rect key="frame" x="0.0" y="0.0" width="71.333333333333329" height="15.333333333333334"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="71.5" height="15"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_ic1" translatesAutoresizingMaskIntoConstraints="NO" id="1PY-ui-9dp">
-                                            <rect key="frame" x="0.0" y="0.0" width="15.333333333333334" height="15.333333333333334"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="15.5" height="15"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Products" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45U-dD-7ZN">
-                                            <rect key="frame" x="20.333333333333329" y="0.66666666666662877" width="51" height="14.333333333333334"/>
+                                            <rect key="frame" x="20.5" y="0.5" width="51" height="14.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -42,16 +42,16 @@
                                     </subviews>
                                 </stackView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar line" translatesAutoresizingMaskIntoConstraints="NO" id="PHX-s5-tBZ">
-                                    <rect key="frame" x="97.333333333333343" y="0.33333333333325754" width="1.3333333333333286" height="15"/>
+                                    <rect key="frame" x="97.5" y="0.0" width="1.5" height="15"/>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="S82-pN-a9t">
-                                    <rect key="frame" x="124.66666666666664" y="0.0" width="53.333333333333329" height="15.333333333333334"/>
+                                    <rect key="frame" x="125" y="0.0" width="53" height="15"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_ic2" translatesAutoresizingMaskIntoConstraints="NO" id="5pU-8R-9vb">
-                                            <rect key="frame" x="0.0" y="0.0" width="15.333333333333334" height="15.333333333333334"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57a-gU-Aba">
-                                            <rect key="frame" x="20.333333333333343" y="0.66666666666662877" width="33" height="14.333333333333334"/>
+                                            <rect key="frame" x="20" y="0.5" width="33" height="14.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -59,16 +59,16 @@
                                     </subviews>
                                 </stackView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar line" translatesAutoresizingMaskIntoConstraints="NO" id="bei-fr-yeW">
-                                    <rect key="frame" x="204" y="0.33333333333325754" width="1.3333333333333428" height="15"/>
+                                    <rect key="frame" x="204" y="0.0" width="1.5" height="15"/>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aQk-MY-HSz">
-                                    <rect key="frame" x="231.33333333333331" y="0.33333333333325754" width="59" height="15"/>
+                                    <rect key="frame" x="231.5" y="0.0" width="59.5" height="15"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_ic3" translatesAutoresizingMaskIntoConstraints="NO" id="EQx-mt-NEb">
-                                            <rect key="frame" x="0.0" y="0.0" width="15.333333333333334" height="15"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="15.5" height="15"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZZ-tq-kgQ">
-                                            <rect key="frame" x="20.333333333333368" y="0.33333333333337123" width="38.666666666666657" height="14.333333333333334"/>
+                                            <rect key="frame" x="20.5" y="0.5" width="39" height="14.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -86,17 +86,35 @@
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJD-3k-tjU">
                                     <rect key="frame" x="0.0" y="-8" width="128" height="76"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
-                                    <state key="normal" title="Button"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal">
+                                        <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="didPressTab:" destination="-1" eventType="touchUpInside" id="LDF-7A-fQA"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoW-z4-lbM">
                                     <rect key="frame" x="286" y="-8" width="128" height="76"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
-                                    <state key="normal" title="Button"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal">
+                                        <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="didPressTab:" destination="-1" eventType="touchUpInside" id="X5T-RQ-WQg"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YR-Tw-o7v">
                                     <rect key="frame" x="143" y="-8" width="128" height="76"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <state key="normal" title="Button"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal">
+                                        <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="didPressTab:" destination="-1" eventType="touchUpInside" id="5cC-rh-rhs"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>

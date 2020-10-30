@@ -26,19 +26,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        //Home
-        let productVC = ProductViewController()
-        let productNavi = BaseNavigationController(rootViewController: productVC)
-        //Users
-        let usersVC = UsersViewController()
-        let usersNavi = BaseNavigationController(rootViewController: usersVC)
-        //Orders
-        let ordersVC = OrdersViewController()
-        let ordersNavi = BaseNavigationController(rootViewController: ordersVC)
-        let tabbarController = TabbarController()
-        tabbarController.viewControllers = [productNavi, usersNavi, ordersNavi]
-        
-        window.rootViewController = tabbarController
+        //TabbarViewController
+        let TabbarVC = TabbarController()
+        window.rootViewController = TabbarVC
         
         
         self.window = window
