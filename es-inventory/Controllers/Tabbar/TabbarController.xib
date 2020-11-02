@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -35,7 +34,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WoE-H9-isX">
                     <rect key="frame" x="0.0" y="44" width="414" height="792"/>
-                    <color key="backgroundColor" systemColor="systemGray3Color"/>
+                    <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JqB-rh-E8e">
                     <rect key="frame" x="0.0" y="836" width="414" height="60"/>
@@ -44,13 +43,13 @@
                             <rect key="frame" x="-200" y="-10" width="814" height="75"/>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="vYL-GL-qUK">
-                            <rect key="frame" x="61.5" y="22.5" width="291" height="15.5"/>
+                            <rect key="frame" x="61.5" y="22.5" width="291.5" height="15.5"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Cx-YN-4vi">
-                                    <rect key="frame" x="0.0" y="0.0" width="71.5" height="15"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="71.5" height="15.5"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_ic1" translatesAutoresizingMaskIntoConstraints="NO" id="1PY-ui-9dp">
-                                            <rect key="frame" x="0.0" y="0.0" width="15.5" height="15"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="15.5" height="15.5"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Products" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45U-dD-7ZN">
                                             <rect key="frame" x="20.5" y="0.5" width="51" height="14.5"/>
@@ -64,10 +63,10 @@
                                     <rect key="frame" x="97.5" y="0.0" width="1.5" height="15"/>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="S82-pN-a9t">
-                                    <rect key="frame" x="125" y="0.0" width="53.5" height="15"/>
+                                    <rect key="frame" x="125" y="0.0" width="53.5" height="15.5"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_ic2" translatesAutoresizingMaskIntoConstraints="NO" id="5pU-8R-9vb">
-                                            <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="15.5" height="15.5"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57a-gU-Aba">
                                             <rect key="frame" x="20.5" y="0.5" width="33" height="14.5"/>
@@ -78,10 +77,10 @@
                                     </subviews>
                                 </stackView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar line" translatesAutoresizingMaskIntoConstraints="NO" id="bei-fr-yeW">
-                                    <rect key="frame" x="204.5" y="0.0" width="1" height="15"/>
+                                    <rect key="frame" x="204.5" y="0.0" width="1.5" height="15"/>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aQk-MY-HSz">
-                                    <rect key="frame" x="231.5" y="0.0" width="59.5" height="15"/>
+                                    <rect key="frame" x="232" y="0.0" width="59.5" height="15"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_ic3" translatesAutoresizingMaskIntoConstraints="NO" id="EQx-mt-NEb">
                                             <rect key="frame" x="0.0" y="0.0" width="15.5" height="15"/>
@@ -103,34 +102,34 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="130-vV-Q32">
                             <rect key="frame" x="0.0" y="-8" width="414" height="68"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJD-3k-tjU">
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJD-3k-tjU">
                                     <rect key="frame" x="0.0" y="-8" width="128" height="76"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal">
-                                        <color key="titleColor" systemColor="groupTableViewBackgroundColor"/>
+                                        <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </state>
                                     <connections>
                                         <action selector="didPressTab:" destination="-1" eventType="touchUpInside" id="LDF-7A-fQA"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="2" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoW-z4-lbM">
+                                <button opaque="NO" tag="2" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoW-z4-lbM">
                                     <rect key="frame" x="286" y="-8" width="128" height="76"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal">
-                                        <color key="titleColor" systemColor="groupTableViewBackgroundColor"/>
+                                        <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </state>
                                     <connections>
                                         <action selector="didPressTab:" destination="-1" eventType="touchUpInside" id="X5T-RQ-WQg"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YR-Tw-o7v">
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YR-Tw-o7v">
                                     <rect key="frame" x="143" y="-8" width="128" height="76"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal">
-                                        <color key="titleColor" systemColor="groupTableViewBackgroundColor"/>
+                                        <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </state>
                                     <connections>
                                         <action selector="didPressTab:" destination="-1" eventType="touchUpInside" id="5cC-rh-rhs"/>
@@ -176,8 +175,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="JqB-rh-E8e" firstAttribute="top" secondItem="WoE-H9-isX" secondAttribute="bottom" id="5hI-HK-rFv"/>
                 <constraint firstAttribute="bottom" secondItem="JqB-rh-E8e" secondAttribute="bottom" id="Eup-8A-R2v"/>
@@ -188,6 +186,7 @@
                 <constraint firstItem="WoE-H9-isX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xpE-NS-Urp"/>
                 <constraint firstItem="WoE-H9-isX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ycB-E9-MpW"/>
             </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="15.942028985507248" y="75.669642857142847"/>
         </view>
     </objects>
@@ -198,20 +197,5 @@
         <image name="tabbar_ic1" width="15.333333015441895" height="15.333333015441895"/>
         <image name="tabbar_ic2" width="15.333333015441895" height="15.333333015441895"/>
         <image name="tabbar_ic3" width="15.333333015441895" height="15"/>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
