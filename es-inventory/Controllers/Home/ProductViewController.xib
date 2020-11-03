@@ -146,6 +146,9 @@
                         <constraint firstAttribute="width" constant="75" id="MHI-J7-7Nb"/>
                         <constraint firstAttribute="height" constant="75" id="UOp-cR-4G1"/>
                     </constraints>
+                    <connections>
+                        <action selector="didAddProduct:" destination="-1" eventType="touchUpInside" id="bwR-Hh-C5J"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

@@ -32,10 +32,20 @@ class TabbarController: BaseViewController {
         tabView.layer.shadowRadius = 10
         tabView.layer.masksToBounds = false
         tabView.layer.shadowPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 5, height: 5)).cgPath
+        
         productViewController = ProductViewController(nibName: "ProductViewController", bundle: nil)
+        let productNavi = BaseNavigationController(rootViewController: productViewController)
+        productNavi.navigationBar.isHidden = true
+        
         usersViewController = UsersViewController(nibName: "UsersViewController", bundle: nil)
+        let usersNavi = BaseNavigationController(rootViewController: usersViewController)
+        usersNavi.navigationBar.isHidden = true
+        
         ordersViewController = OrdersViewController(nibName: "OrdersViewController", bundle: nil)
-        viewControllers = [productViewController, usersViewController, ordersViewController]
+        let ordersNavi = BaseNavigationController(rootViewController: ordersViewController)
+        ordersNavi.navigationBar.isHidden = true
+        
+        viewControllers = [productNavi, usersNavi, ordersNavi]
         buttons[selectedIndex].isSelected = true
         didPressTab(buttons[selectedIndex])
         // Do any additional setup after loading the view.

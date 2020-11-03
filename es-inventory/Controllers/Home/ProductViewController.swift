@@ -28,6 +28,10 @@ class ProductViewController: BaseViewController, UITableViewDelegate, UITableVie
         title = App.Text.titleHome
     }
     
+    @IBAction func didAddProduct(_ sender: UIButton) {
+        let cameraVC = ViewController()
+        navigationController?.pushViewController(cameraVC, animated: false)
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }

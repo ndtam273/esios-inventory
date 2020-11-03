@@ -26,6 +26,9 @@
 		F7048F6A254AA8D8005509FC /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7048F69254AA8D8005509FC /* TabItem.swift */; };
 		F7048F6F254AAC7A005509FC /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7048F6D254AAC7A005509FC /* TabbarController.swift */; };
 		F7048F70254AAC7A005509FC /* TabbarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7048F6E254AAC7A005509FC /* TabbarController.xib */; };
+		F7179D432551649A00073AFC /* ViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7179D422551649A00073AFC /* ViewController+Extras.swift */; };
+		F7179D48255164F700073AFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7179D47255164F700073AFC /* ViewController.swift */; };
+		F7179D4B2551653900073AFC /* CapturedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7179D4A2551653900073AFC /* CapturedImageView.swift */; };
 		F73D1557254FB7E10056AF93 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D1555254FB7E10056AF93 /* ProductCell.swift */; };
 		F73D1558254FB7E10056AF93 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73D1556254FB7E10056AF93 /* ProductCell.xib */; };
 		F73D155E254FE8830056AF93 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D155C254FE8830056AF93 /* OrderCell.swift */; };
@@ -67,6 +70,9 @@
 		F7048F69254AA8D8005509FC /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabItem.swift; path = "es-inventory/Controllers/Orders/TabItem.swift"; sourceTree = SOURCE_ROOT; };
 		F7048F6D254AAC7A005509FC /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		F7048F6E254AAC7A005509FC /* TabbarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabbarController.xib; sourceTree = "<group>"; };
+		F7179D422551649A00073AFC /* ViewController+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extras.swift"; sourceTree = "<group>"; };
+		F7179D47255164F700073AFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F7179D4A2551653900073AFC /* CapturedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturedImageView.swift; sourceTree = "<group>"; };
 		F73D1555254FB7E10056AF93 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductCell.swift; path = "es-inventory/Controllers/Tabbar/ProductCell.swift"; sourceTree = SOURCE_ROOT; };
 		F73D1556254FB7E10056AF93 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProductCell.xib; path = "es-inventory/Controllers/Tabbar/ProductCell.xib"; sourceTree = SOURCE_ROOT; };
 		F73D155C254FE8830056AF93 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
@@ -248,6 +254,16 @@
 			path = Tabbar;
 			sourceTree = "<group>";
 		};
+		F7179D3E2551143F00073AFC /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				F7179D422551649A00073AFC /* ViewController+Extras.swift */,
+				F7179D47255164F700073AFC /* ViewController.swift */,
+				F7179D4A2551653900073AFC /* CapturedImageView.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
 		F73D155A254FC8800056AF93 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +338,7 @@
 		F7775B5325492B8800858774 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F7179D3E2551143F00073AFC /* Camera */,
 				F7048F6C254AABDF005509FC /* Tabbar */,
 				F7048F5C254AA11B005509FC /* Orders */,
 				F7048F5B254AA111005509FC /* Users */,
@@ -509,12 +526,15 @@
 				F7048F65254AA14A005509FC /* OrdersViewController.swift in Sources */,
 				F73D1567254FEA540056AF93 /* UserCell.swift in Sources */,
 				F7775B632549384D00858774 /* BaseNavigationController.swift in Sources */,
+				F7179D4B2551653900073AFC /* CapturedImageView.swift in Sources */,
 				F7048F3E254A73C4005509FC /* Data.Ext.swift in Sources */,
 				F7048F24254A6CEF005509FC /* ProductViewModel.swift in Sources */,
+				F7179D48255164F700073AFC /* ViewController.swift in Sources */,
 				F7048F29254A6D96005509FC /* Button.swift in Sources */,
 				F7775B612549381700858774 /* BaseViewController.swift in Sources */,
 				F7775B5E254937BE00858774 /* App.Color.swift in Sources */,
 				F7048F1D254A69D9005509FC /* ProductViewController.swift in Sources */,
+				F7179D432551649A00073AFC /* ViewController+Extras.swift in Sources */,
 				F7048F5F254AA13B005509FC /* UsersViewController.swift in Sources */,
 				F73D1557254FB7E10056AF93 /* ProductCell.swift in Sources */,
 				F7048F42254A73E5005509FC /* Color.Ext.swift in Sources */,

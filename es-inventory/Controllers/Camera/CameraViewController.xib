@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraViewController" customModule="es_inventory" customModuleProvider="target">
+            <connections>
+                <outlet property="menuView" destination="WlT-Sa-2dx" id="EVT-63-GUs"/>
+                <outlet property="previewView" destination="oDa-qI-rTW" id="xFM-oW-1lf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oDa-qI-rTW">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WlT-Sa-2dx">
+                            <rect key="frame" x="0.0" y="702" width="414" height="150"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMR-sA-0rK">
+                                    <rect key="frame" x="167" y="35" width="80" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="80" id="IFe-dJ-frg"/>
+                                        <constraint firstAttribute="height" constant="80" id="QUn-DI-qA8"/>
+                                    </constraints>
+                                    <state key="normal" backgroundImage="take_photo"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ial-11-3XE">
+                                    <rect key="frame" x="40" y="35" width="80" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="1l5-ka-o3a"/>
+                                        <constraint firstAttribute="width" constant="80" id="76V-Yn-h6g"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="12"/>
+                                    <state key="normal" title="Back">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC9-VC-NxM">
+                                    <rect key="frame" x="294" y="35" width="80" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="80" id="22W-dA-MJN"/>
+                                        <constraint firstAttribute="height" constant="80" id="sf9-Qv-9A0"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="12"/>
+                                    <state key="normal" title="Skip">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="hC9-VC-NxM" firstAttribute="centerY" secondItem="WlT-Sa-2dx" secondAttribute="centerY" id="VuH-8s-0rX"/>
+                                <constraint firstItem="dMR-sA-0rK" firstAttribute="centerY" secondItem="WlT-Sa-2dx" secondAttribute="centerY" id="eDB-Yq-RSz"/>
+                                <constraint firstItem="ial-11-3XE" firstAttribute="leading" secondItem="WlT-Sa-2dx" secondAttribute="leading" constant="40" id="fFt-Hg-5lk"/>
+                                <constraint firstAttribute="trailing" secondItem="hC9-VC-NxM" secondAttribute="trailing" constant="40" id="iTK-IH-Bo8"/>
+                                <constraint firstAttribute="height" constant="150" id="lVC-Ox-Zjc"/>
+                                <constraint firstItem="dMR-sA-0rK" firstAttribute="centerX" secondItem="WlT-Sa-2dx" secondAttribute="centerX" id="ulg-1x-lz9"/>
+                                <constraint firstItem="ial-11-3XE" firstAttribute="centerY" secondItem="WlT-Sa-2dx" secondAttribute="centerY" id="wMA-7S-Nw8"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="WlT-Sa-2dx" firstAttribute="leading" secondItem="oDa-qI-rTW" secondAttribute="leading" id="LhE-IR-NVF"/>
+                        <constraint firstAttribute="trailing" secondItem="WlT-Sa-2dx" secondAttribute="trailing" id="NsS-Vy-9Ir"/>
+                        <constraint firstAttribute="bottom" secondItem="WlT-Sa-2dx" secondAttribute="bottom" id="uOM-s8-wkI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="oDa-qI-rTW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2YB-q4-gyu"/>
+                <constraint firstAttribute="trailing" secondItem="oDa-qI-rTW" secondAttribute="trailing" id="6Mw-ic-pht"/>
+                <constraint firstItem="oDa-qI-rTW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6OO-3A-bfd"/>
+                <constraint firstItem="oDa-qI-rTW" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="34" id="FVC-4o-YEg"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="take_photo" width="80" height="80"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
