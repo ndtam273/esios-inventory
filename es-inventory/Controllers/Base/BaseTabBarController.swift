@@ -14,5 +14,7 @@ class BaseTabBarController: UITabBarController {
  
         // Do any additional setup after loading the view.
     }
- 
+    func setupData() {}
+    
+    func setupUI() {}
 }

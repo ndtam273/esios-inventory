@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraViewController" customModule="es_inventory" customModuleProvider="target">
+            <connections>
+                <outlet property="menuView" destination="WlT-Sa-2dx" id="tp1-Nb-6os"/>
+                <outlet property="previewView" destination="PRF-N0-RpK" id="ExI-2L-8Ks"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRF-N0-RpK">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WlT-Sa-2dx">
+                    <rect key="frame" x="0.0" y="746" width="414" height="150"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMR-sA-0rK">
+                            <rect key="frame" x="167" y="35" width="80" height="80"/>
+                            <state key="normal" backgroundImage="take_photo"/>
+                            <connections>
+                                <action selector="takePhotoWithSender:" destination="-1" eventType="touchUpInside" id="XaK-PM-hR1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ial-11-3XE">
+                            <rect key="frame" x="40" y="35" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="8nh-Po-vke"/>
+                                <constraint firstAttribute="height" constant="80" id="Ucx-em-L13"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="12"/>
+                            <state key="normal" title="Back">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC9-VC-NxM">
+                            <rect key="frame" x="294" y="35" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="POn-dg-Bfd"/>
+                                <constraint firstAttribute="width" constant="80" id="sVl-lF-ihn"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="12"/>
+                            <state key="normal" title="Skip">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="hC9-VC-NxM" secondAttribute="trailing" constant="40" id="26Q-9M-LgS"/>
+                        <constraint firstItem="ial-11-3XE" firstAttribute="leading" secondItem="WlT-Sa-2dx" secondAttribute="leading" constant="40" id="5xZ-ma-NV0"/>
+                        <constraint firstAttribute="height" constant="150" id="7q5-t6-9WQ"/>
+                        <constraint firstItem="ial-11-3XE" firstAttribute="centerY" secondItem="WlT-Sa-2dx" secondAttribute="centerY" id="OCV-xa-IYA"/>
+                        <constraint firstItem="dMR-sA-0rK" firstAttribute="centerX" secondItem="WlT-Sa-2dx" secondAttribute="centerX" id="bvM-vi-wao"/>
+                        <constraint firstItem="hC9-VC-NxM" firstAttribute="centerY" secondItem="WlT-Sa-2dx" secondAttribute="centerY" id="djG-71-jPb"/>
+                        <constraint firstItem="ial-11-3XE" firstAttribute="leading" secondItem="WlT-Sa-2dx" secondAttribute="leading" constant="40" id="vLf-xr-6pI"/>
+                        <constraint firstItem="dMR-sA-0rK" firstAttribute="centerY" secondItem="WlT-Sa-2dx" secondAttribute="centerY" id="xFw-EV-6gK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="WlT-Sa-2dx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1Jj-MU-iGS"/>
+                <constraint firstAttribute="bottom" secondItem="WlT-Sa-2dx" secondAttribute="bottom" id="5bK-8R-CkR"/>
+                <constraint firstAttribute="trailing" secondItem="PRF-N0-RpK" secondAttribute="trailing" id="6aE-iV-tD7"/>
+                <constraint firstAttribute="trailing" secondItem="WlT-Sa-2dx" secondAttribute="trailing" id="RFh-kF-Ytw"/>
+                <constraint firstItem="PRF-N0-RpK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="a72-C7-xfu"/>
+                <constraint firstAttribute="bottom" secondItem="PRF-N0-RpK" secondAttribute="bottom" id="qkH-aS-c2Y"/>
+                <constraint firstItem="PRF-N0-RpK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sX5-S8-CBb"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="take_photo" width="80" height="80"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -29,8 +29,11 @@ class ProductViewController: BaseViewController, UITableViewDelegate, UITableVie
     }
     
     @IBAction func didAddProduct(_ sender: UIButton) {
-        let cameraVC = ViewController()
+        let cameraVC = CameraViewController()
         navigationController?.pushViewController(cameraVC, animated: false)
+//        self.present(cameraVC, animated: false) {
+//            return
+//        }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20

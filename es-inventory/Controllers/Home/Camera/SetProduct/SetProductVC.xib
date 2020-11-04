@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetProductVC" customModule="es_inventory" customModuleProvider="target">
+            <connections>
+                <outlet property="picImageView" destination="3Lk-am-uIa" id="EnZ-8N-gsG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTh-wj-1MM">
+                    <rect key="frame" x="16" y="56" width="113" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="8Li-7b-67d"/>
+                        <constraint firstAttribute="width" constant="113" id="O32-0Q-nLE"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="retake_back"/>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Lk-am-uIa">
+                    <rect key="frame" x="16" y="95" width="382" height="370"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="3Lk-am-uIa" secondAttribute="height" multiplier="375:363" id="moB-1K-yFc"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4H-FD-Tgl">
+                    <rect key="frame" x="16" y="492" width="84" height="16"/>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeC-Eq-KGv">
+                    <rect key="frame" x="16" y="587" width="50" height="15.5"/>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e1C-4A-iyD">
+                    <rect key="frame" x="16" y="523" width="382" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="D8t-We-7SI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cp4-aC-L2f">
+                    <rect key="frame" x="16" y="617.5" width="382" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Btx-Lv-2FT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAS-jS-pnl">
+                    <rect key="frame" x="19.5" y="681.5" width="375" height="44"/>
+                    <state key="normal" title="OK" backgroundImage="button"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="3Lk-am-uIa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0MO-1x-P8h"/>
+                <constraint firstItem="IeC-Eq-KGv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="1MS-pv-knE"/>
+                <constraint firstItem="Cp4-aC-L2f" firstAttribute="top" secondItem="IeC-Eq-KGv" secondAttribute="bottom" constant="15" id="2wP-zG-srb"/>
+                <constraint firstItem="3Lk-am-uIa" firstAttribute="top" secondItem="kTh-wj-1MM" secondAttribute="bottom" constant="19" id="3B4-UY-Hft"/>
+                <constraint firstItem="Cp4-aC-L2f" firstAttribute="leading" secondItem="IeC-Eq-KGv" secondAttribute="leading" id="ADc-eg-MFf"/>
+                <constraint firstItem="e4H-FD-Tgl" firstAttribute="top" secondItem="3Lk-am-uIa" secondAttribute="bottom" constant="27" id="CIX-F8-s5x"/>
+                <constraint firstItem="Cp4-aC-L2f" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="J88-GM-2aL"/>
+                <constraint firstItem="e1C-4A-iyD" firstAttribute="leading" secondItem="e4H-FD-Tgl" secondAttribute="leading" id="Mat-WN-P7x"/>
+                <constraint firstItem="jAS-jS-pnl" firstAttribute="width" secondItem="Cp4-aC-L2f" secondAttribute="width" multiplier="0.981675" id="Mli-4N-t6r"/>
+                <constraint firstItem="e1C-4A-iyD" firstAttribute="top" secondItem="e4H-FD-Tgl" secondAttribute="bottom" constant="15" id="Oon-5N-e6p"/>
+                <constraint firstItem="jAS-jS-pnl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QIX-1p-eQH"/>
+                <constraint firstItem="kTh-wj-1MM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="R6c-FE-2vb"/>
+                <constraint firstItem="jAS-jS-pnl" firstAttribute="top" secondItem="Cp4-aC-L2f" secondAttribute="bottom" constant="20" id="TT7-Re-Pqx"/>
+                <constraint firstItem="3Lk-am-uIa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bxx-sU-3ez"/>
+                <constraint firstItem="3Lk-am-uIa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="c58-7G-sLQ"/>
+                <constraint firstItem="e4H-FD-Tgl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="e0f-lx-s27"/>
+                <constraint firstItem="e1C-4A-iyD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mTP-gm-79L"/>
+                <constraint firstItem="kTh-wj-1MM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="pFe-MQ-DMC"/>
+                <constraint firstItem="IeC-Eq-KGv" firstAttribute="top" secondItem="e1C-4A-iyD" secondAttribute="bottom" constant="20" id="sfs-jB-OJX"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="89.732142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="button" width="375" height="44"/>
+        <image name="retake_back" width="113" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -9,6 +9,9 @@
 import UIKit
 
 class TabbarController: BaseViewController {
+    
+    static let shared = TabbarController(nibName: "TabbarController", bundle: .main)
+    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet var imgViews: [UIImageView]!
@@ -21,6 +24,8 @@ class TabbarController: BaseViewController {
     
     @IBOutlet weak var tabView: UIView!
     var viewControllers : [UIViewController]!
+    
+    
     
     var selectedIndex: Int = 0
     
@@ -58,7 +63,15 @@ class TabbarController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
-
+    
+    func hideTabbar() {
+        
+    }
+    
+    func showTabbar() {
+        
+    }
+    
     @IBAction func didPressTab(_ sender: UIButton) {
         let previousIndex = selectedIndex
         selectedIndex = sender.tag

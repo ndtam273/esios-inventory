@@ -26,8 +26,7 @@
 		F7048F6A254AA8D8005509FC /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7048F69254AA8D8005509FC /* TabItem.swift */; };
 		F7048F6F254AAC7A005509FC /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7048F6D254AAC7A005509FC /* TabbarController.swift */; };
 		F7048F70254AAC7A005509FC /* TabbarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7048F6E254AAC7A005509FC /* TabbarController.xib */; };
-		F7179D432551649A00073AFC /* ViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7179D422551649A00073AFC /* ViewController+Extras.swift */; };
-		F7179D48255164F700073AFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7179D47255164F700073AFC /* ViewController.swift */; };
+		F7179D48255164F700073AFC /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7179D47255164F700073AFC /* CameraViewController.swift */; };
 		F7179D4B2551653900073AFC /* CapturedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7179D4A2551653900073AFC /* CapturedImageView.swift */; };
 		F73D1557254FB7E10056AF93 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D1555254FB7E10056AF93 /* ProductCell.swift */; };
 		F73D1558254FB7E10056AF93 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73D1556254FB7E10056AF93 /* ProductCell.xib */; };
@@ -35,6 +34,8 @@
 		F73D155F254FE8830056AF93 /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73D155D254FE8830056AF93 /* OrderCell.xib */; };
 		F73D1567254FEA540056AF93 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D1565254FEA540056AF93 /* UserCell.swift */; };
 		F73D1568254FEA540056AF93 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73D1566254FEA540056AF93 /* UserCell.xib */; };
+		F7454674255247FA00F38AF3 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7454673255247FA00F38AF3 /* CameraViewController.xib */; };
+		F745467C25524C8300F38AF3 /* ViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = F745467B25524C8200F38AF3 /* ViewController+Extras.swift */; };
 		F7775B3A2549207B00858774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7775B392549207B00858774 /* AppDelegate.swift */; };
 		F7775B3C2549207B00858774 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7775B3B2549207B00858774 /* SceneDelegate.swift */; };
 		F7775B432549207D00858774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7775B422549207D00858774 /* Assets.xcassets */; };
@@ -46,6 +47,8 @@
 		F7775B612549381700858774 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7775B602549381700858774 /* BaseViewController.swift */; };
 		F7775B632549384D00858774 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7775B622549384D00858774 /* BaseNavigationController.swift */; };
 		F7775B652549388000858774 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7775B642549388000858774 /* BaseTabBarController.swift */; };
+		F7D148122552A4CC00228D89 /* SetProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D148102552A4CC00228D89 /* SetProductVC.swift */; };
+		F7D148132552A4CC00228D89 /* SetProductVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7D148112552A4CC00228D89 /* SetProductVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,8 +73,7 @@
 		F7048F69254AA8D8005509FC /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabItem.swift; path = "es-inventory/Controllers/Orders/TabItem.swift"; sourceTree = SOURCE_ROOT; };
 		F7048F6D254AAC7A005509FC /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		F7048F6E254AAC7A005509FC /* TabbarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabbarController.xib; sourceTree = "<group>"; };
-		F7179D422551649A00073AFC /* ViewController+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extras.swift"; sourceTree = "<group>"; };
-		F7179D47255164F700073AFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F7179D47255164F700073AFC /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		F7179D4A2551653900073AFC /* CapturedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturedImageView.swift; sourceTree = "<group>"; };
 		F73D1555254FB7E10056AF93 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductCell.swift; path = "es-inventory/Controllers/Tabbar/ProductCell.swift"; sourceTree = SOURCE_ROOT; };
 		F73D1556254FB7E10056AF93 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProductCell.xib; path = "es-inventory/Controllers/Tabbar/ProductCell.xib"; sourceTree = SOURCE_ROOT; };
@@ -81,6 +83,8 @@
 		F73D1563254FE9220056AF93 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		F73D1565254FEA540056AF93 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		F73D1566254FEA540056AF93 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		F7454673255247FA00F38AF3 /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		F745467B25524C8200F38AF3 /* ViewController+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Extras.swift"; sourceTree = "<group>"; };
 		F74C0220254BF02A000918C4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		F74C0221254BF02A000918C4 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		F74C0223254BF11B000918C4 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 		F7775B602549381700858774 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F7775B622549384D00858774 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		F7775B642549388000858774 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		F7D148102552A4CC00228D89 /* SetProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProductVC.swift; sourceTree = "<group>"; };
+		F7D148112552A4CC00228D89 /* SetProductVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetProductVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,7 @@
 		F7048F1A254A6986005509FC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F7179D3E2551143F00073AFC /* Camera */,
 				F7048F22254A6CC9005509FC /* Cells */,
 				F7048F1B254A69D9005509FC /* ProductViewController.swift */,
 				F7048F1C254A69D9005509FC /* ProductViewController.xib */,
@@ -257,9 +264,11 @@
 		F7179D3E2551143F00073AFC /* Camera */ = {
 			isa = PBXGroup;
 			children = (
-				F7179D422551649A00073AFC /* ViewController+Extras.swift */,
-				F7179D47255164F700073AFC /* ViewController.swift */,
+				F7D1480F2552A4A400228D89 /* SetProduct */,
+				F745467B25524C8200F38AF3 /* ViewController+Extras.swift */,
+				F7179D47255164F700073AFC /* CameraViewController.swift */,
 				F7179D4A2551653900073AFC /* CapturedImageView.swift */,
+				F7454673255247FA00F38AF3 /* CameraViewController.xib */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -338,7 +347,6 @@
 		F7775B5325492B8800858774 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F7179D3E2551143F00073AFC /* Camera */,
 				F7048F6C254AABDF005509FC /* Tabbar */,
 				F7048F5C254AA11B005509FC /* Orders */,
 				F7048F5B254AA111005509FC /* Users */,
@@ -387,6 +395,15 @@
 				F7775B642549388000858774 /* BaseTabBarController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		F7D1480F2552A4A400228D89 /* SetProduct */ = {
+			isa = PBXGroup;
+			children = (
+				F7D148102552A4CC00228D89 /* SetProductVC.swift */,
+				F7D148112552A4CC00228D89 /* SetProductVC.xib */,
+			);
+			path = SetProduct;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,6 +468,7 @@
 			files = (
 				F7775B462549207D00858774 /* LaunchScreen.storyboard in Resources */,
 				F7048F60254AA13B005509FC /* UsersViewController.xib in Resources */,
+				F7D148132552A4CC00228D89 /* SetProductVC.xib in Resources */,
 				F73D155F254FE8830056AF93 /* OrderCell.xib in Resources */,
 				F73D1558254FB7E10056AF93 /* ProductCell.xib in Resources */,
 				F7048F1E254A69D9005509FC /* ProductViewController.xib in Resources */,
@@ -458,6 +476,7 @@
 				F7775B432549207D00858774 /* Assets.xcassets in Resources */,
 				F7048F66254AA14A005509FC /* OrdersViewController.xib in Resources */,
 				F7048F70254AAC7A005509FC /* TabbarController.xib in Resources */,
+				F7454674255247FA00F38AF3 /* CameraViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +532,7 @@
 				F7775B3A2549207B00858774 /* AppDelegate.swift in Sources */,
 				F7048F6F254AAC7A005509FC /* TabbarController.swift in Sources */,
 				F7048F3A254A7310005509FC /* DataManager.swift in Sources */,
+				F745467C25524C8300F38AF3 /* ViewController+Extras.swift in Sources */,
 				F7775B5C2549377100858774 /* App.Text.swift in Sources */,
 				F7048F37254A724A005509FC /* Music.swift in Sources */,
 				F7775B652549388000858774 /* BaseTabBarController.swift in Sources */,
@@ -526,15 +546,15 @@
 				F7048F65254AA14A005509FC /* OrdersViewController.swift in Sources */,
 				F73D1567254FEA540056AF93 /* UserCell.swift in Sources */,
 				F7775B632549384D00858774 /* BaseNavigationController.swift in Sources */,
+				F7D148122552A4CC00228D89 /* SetProductVC.swift in Sources */,
 				F7179D4B2551653900073AFC /* CapturedImageView.swift in Sources */,
 				F7048F3E254A73C4005509FC /* Data.Ext.swift in Sources */,
 				F7048F24254A6CEF005509FC /* ProductViewModel.swift in Sources */,
-				F7179D48255164F700073AFC /* ViewController.swift in Sources */,
+				F7179D48255164F700073AFC /* CameraViewController.swift in Sources */,
 				F7048F29254A6D96005509FC /* Button.swift in Sources */,
 				F7775B612549381700858774 /* BaseViewController.swift in Sources */,
 				F7775B5E254937BE00858774 /* App.Color.swift in Sources */,
 				F7048F1D254A69D9005509FC /* ProductViewController.swift in Sources */,
-				F7179D432551649A00073AFC /* ViewController+Extras.swift in Sources */,
 				F7048F5F254AA13B005509FC /* UsersViewController.swift in Sources */,
 				F73D1557254FB7E10056AF93 /* ProductCell.swift in Sources */,
 				F7048F42254A73E5005509FC /* Color.Ext.swift in Sources */,

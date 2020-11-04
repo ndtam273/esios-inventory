@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class CameraViewController: BaseViewController {
     //MARK:- Vars
     var captureSession : AVCaptureSession!
     
@@ -22,42 +22,80 @@ class ViewController: UIViewController {
     
     var videoOutput : AVCaptureVideoDataOutput!
     
+    var captureImage : UIImage!
+    
     var takePicture = false
     var backCameraOn = true
     
     //MARK:- View Components
-    let switchCameraButton : UIButton = {
-        let button = UIButton()
-        let image = UIImage(named: "switchcamera")?.withRenderingMode(.alwaysTemplate)
-        button.setImage(image, for: .normal)
-        button.tintColor = .white
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
+    @IBOutlet weak var previewView: UIView!
+    @IBOutlet weak var menuView: UIView!
     
-    let captureImageButton : UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .white
-        button.tintColor = .white
-        button.layer.cornerRadius = 25
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
     
-    let capturedImageView = CapturedImageView()
+    //    let switchCameraButton : UIButton = {
+    //        let button = UIButton()
+    //        let image = UIImage(named: "switchcamera")?.withRenderingMode(.alwaysTemplate)
+    //        button.setImage(image, for: .normal)
+    //        button.tintColor = .white
+    //        button.translatesAutoresizingMaskIntoConstraints = false
+    //        return button
+    //    }()
+    //
+    //    let captureImageButton : UIButton = {
+    //        let button = UIButton()
+    //        button.backgroundColor = .white
+    //        button.tintColor = .white
+    //        button.layer.cornerRadius = 25
+    //        button.translatesAutoresizingMaskIntoConstraints = false
+    //        return button
+    //    }()
+    
+    //    let capturedImageView = CapturedImageView()
     
     //MARK:- Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
+        //        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+        //            TabbarController.shared.hideTabbar()
+        //        }
+        
     }
+    
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         checkPermissions()
         setupAndStartCaptureSession()
     }
+    //MARK:- Permissions
+    func checkPermissions() {
+        let cameraAuthStatus =  AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
+        switch cameraAuthStatus {
+        case .authorized:
+            return
+        case .denied:
+            abort()
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler:
+                                            { (authorized) in
+                                                if(!authorized){
+                                                    abort()
+                                                }
+                                            })
+        case .restricted:
+            abort()
+        @unknown default:
+            fatalError()
+        }
+    }
     
+    @IBAction func takePhoto(sender: UIButton) {
+        takePicture = true
+        //        let setProductVC = SetProductVC()
+        //        setProductVC.picImageView.image = captureImage
+        //        self.navigationController?.pushViewController(setProductVC, animated: false)
+    }
     //MARK:- Camera Setup
     func setupAndStartCaptureSession(){
         DispatchQueue.global(qos: .userInitiated).async{
@@ -143,51 +181,52 @@ class ViewController: UIViewController {
     
     func setupPreviewLayer(){
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        view.layer.insertSublayer(previewLayer, below: switchCameraButton.layer)
-        previewLayer.frame = self.view.layer.frame
+        previewView.layer.insertSublayer(previewLayer, below: menuView.layer)
+        previewLayer.frame = self.previewView.layer.frame
+        
     }
     
-    func switchCameraInput(){
-        //don't let user spam the button, fun for the user, not fun for performance
-        switchCameraButton.isUserInteractionEnabled = false
-        
-        //reconfigure the input
-        captureSession.beginConfiguration()
-        if backCameraOn {
-            captureSession.removeInput(backInput)
-            captureSession.addInput(frontInput)
-            backCameraOn = false
-        } else {
-            captureSession.removeInput(frontInput)
-            captureSession.addInput(backInput)
-            backCameraOn = true
-        }
-        
-        //deal with the connection again for portrait mode
-        videoOutput.connections.first?.videoOrientation = .portrait
-        
-        //mirror the video stream for front camera
-        videoOutput.connections.first?.isVideoMirrored = !backCameraOn
-        
-        //commit config
-        captureSession.commitConfiguration()
-        
-        //acitvate the camera button again
-        switchCameraButton.isUserInteractionEnabled = true
-    }
+    //    func switchCameraInput(){
+    //        //don't let user spam the button, fun for the user, not fun for performance
+    //        switchCameraButton.isUserInteractionEnabled = false
+    //
+    //        //reconfigure the input
+    //        captureSession.beginConfiguration()
+    //        if backCameraOn {
+    //            captureSession.removeInput(backInput)
+    //            captureSession.addInput(frontInput)
+    //            backCameraOn = false
+    //        } else {
+    //            captureSession.removeInput(frontInput)
+    //            captureSession.addInput(backInput)
+    //            backCameraOn = true
+    //        }
+    //
+    //        //deal with the connection again for portrait mode
+    //        videoOutput.connections.first?.videoOrientation = .portrait
+    //
+    //        //mirror the video stream for front camera
+    //        videoOutput.connections.first?.isVideoMirrored = !backCameraOn
+    //
+    //        //commit config
+    //        captureSession.commitConfiguration()
+    //
+    //        //acitvate the camera button again
+    //        switchCameraButton.isUserInteractionEnabled = true
+    //    }
     
     //MARK:- Actions
-    @objc func captureImage(_ sender: UIButton?){
-        takePicture = true
-    }
+    //    @objc func captureImage(_ sender: UIButton?){
+    //        takePicture = true
+    //    }
+    //
+    //    @objc func switchCamera(_ sender: UIButton?){
+    //        switchCameraInput()
+    //    }
     
-    @objc func switchCamera(_ sender: UIButton?){
-        switchCameraInput()
-    }
-
 }
 
-extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
+extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         if !takePicture {
             return //we have nothing to do with the image buffer
@@ -203,13 +242,18 @@ extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         
         //get UIImage out of CIImage
         let uiImage = UIImage(ciImage: ciImage)
+        print(uiImage)
         
         DispatchQueue.main.async {
-            self.capturedImageView.image = uiImage
+            self.captureImage = uiImage
+            print(self.captureImage!)
             self.takePicture = false
         }
-    }
         
+        
+        
+    }
+    
 }
 
 
