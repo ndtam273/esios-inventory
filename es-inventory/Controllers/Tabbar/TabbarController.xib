@@ -13,6 +13,9 @@
             <connections>
                 <outlet property="TabView" destination="130-vV-Q32" id="TTl-sh-v1z"/>
                 <outlet property="contentView" destination="WoE-H9-isX" id="o5c-gE-RPO"/>
+                <outlet property="stackView" destination="vYL-GL-qUK" id="HcD-gq-AMm"/>
+                <outlet property="tabView" destination="JqB-rh-E8e" id="L2e-AL-tia"/>
+                <outlet property="tabbarHeightConstraint" destination="GD7-Y2-8eS" id="0sS-E3-xIV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="buttons" destination="eJD-3k-tjU" collectionClass="NSMutableArray" id="txd-fv-5Uc"/>
                 <outletCollection property="buttons" destination="7YR-Tw-o7v" collectionClass="NSMutableArray" id="1Hq-0L-t0h"/>
@@ -34,17 +37,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WoE-H9-isX">
-                    <rect key="frame" x="0.0" y="44" width="414" height="792"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="782"/>
                     <color key="backgroundColor" systemColor="systemGray3Color"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JqB-rh-E8e">
-                    <rect key="frame" x="0.0" y="836" width="414" height="60"/>
+                    <rect key="frame" x="0.0" y="826" width="414" height="70"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_bg" translatesAutoresizingMaskIntoConstraints="NO" id="RLU-xm-vah">
-                            <rect key="frame" x="-200" y="-10" width="814" height="75"/>
+                            <rect key="frame" x="-200" y="-10" width="814" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="814" id="H7H-wX-U3b"/>
+                            </constraints>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="vYL-GL-qUK">
-                            <rect key="frame" x="61.5" y="22.5" width="291" height="15.5"/>
+                            <rect key="frame" x="61.5" y="27.5" width="291" height="15.5"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Cx-YN-4vi">
                                     <rect key="frame" x="0.0" y="0.0" width="71.5" height="15"/>
@@ -101,7 +107,7 @@
                             </constraints>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="130-vV-Q32">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                            <rect key="frame" x="0.0" y="10" width="414" height="60"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJD-3k-tjU">
                                     <rect key="frame" x="0.0" y="-8" width="128" height="68"/>
@@ -153,10 +159,10 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="RLU-xm-vah" secondAttribute="bottom" constant="-5" id="2L3-RQ-lbt"/>
+                        <constraint firstAttribute="bottom" secondItem="RLU-xm-vah" secondAttribute="bottom" id="2L3-RQ-lbt"/>
                         <constraint firstItem="6Cx-YN-4vi" firstAttribute="leading" secondItem="Ugi-7y-gjR" secondAttribute="leading" id="3zo-Qv-OFI"/>
                         <constraint firstItem="aQk-MY-HSz" firstAttribute="centerX" secondItem="Dgs-z6-gR1" secondAttribute="centerX" id="60U-uF-rev"/>
-                        <constraint firstAttribute="height" constant="60" id="GD7-Y2-8eS"/>
+                        <constraint firstAttribute="height" constant="70" id="GD7-Y2-8eS"/>
                         <constraint firstItem="Ugi-7y-gjR" firstAttribute="width" secondItem="6Cx-YN-4vi" secondAttribute="width" multiplier="0.979021" id="HPL-zc-Pnp"/>
                         <constraint firstItem="130-vV-Q32" firstAttribute="leading" secondItem="JqB-rh-E8e" secondAttribute="leading" id="IJF-Vu-F2a"/>
                         <constraint firstAttribute="trailing" secondItem="130-vV-Q32" secondAttribute="trailing" id="InW-JD-LI1"/>

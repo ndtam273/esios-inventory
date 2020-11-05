@@ -22,7 +22,8 @@ class CameraViewController: BaseViewController {
     
     var videoOutput : AVCaptureVideoDataOutput!
     
-    var captureImage : UIImage!
+    var captureImageView = CapturedImageView()
+    var captureImage: UIImage?
     
     var takePicture = false
     var backCameraOn = true
@@ -55,6 +56,7 @@ class CameraViewController: BaseViewController {
     //MARK:- Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
         //            TabbarController.shared.hideTabbar()
         //        }
@@ -68,6 +70,12 @@ class CameraViewController: BaseViewController {
         checkPermissions()
         setupAndStartCaptureSession()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.captureSession.stopRunning()
+    }
+    
     //MARK:- Permissions
     func checkPermissions() {
         let cameraAuthStatus =  AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
@@ -92,9 +100,7 @@ class CameraViewController: BaseViewController {
     
     @IBAction func takePhoto(sender: UIButton) {
         takePicture = true
-        //        let setProductVC = SetProductVC()
-        //        setProductVC.picImageView.image = captureImage
-        //        self.navigationController?.pushViewController(setProductVC, animated: false)
+        
     }
     //MARK:- Camera Setup
     func setupAndStartCaptureSession(){
@@ -243,12 +249,20 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         //get UIImage out of CIImage
         let uiImage = UIImage(ciImage: ciImage)
         print(uiImage)
-        
         DispatchQueue.main.async {
-            self.captureImage = uiImage
-            print(self.captureImage!)
+            let setProductVC = SetProductVC()
+            setProductVC.photoShot = uiImage
             self.takePicture = false
+            //            self.navigationController?.pushViewController(setProductVC, animated: false)
+            self.show(setProductVC, sender: nil)
+            
         }
+        
+        
+        //        DispatchQueue.main.async {
+        //            self.captureImage = uiImage
+        //            self.takePicture = false
+        //        }
         
         
         

@@ -11,6 +11,7 @@ class BaseNavigationController: UINavigationController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.tabBarController?.tabBar.isHidden = true
  
         // Do any additional setup after loading the view.
     }

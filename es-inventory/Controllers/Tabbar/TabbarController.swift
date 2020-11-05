@@ -10,14 +10,17 @@ import UIKit
 
 class TabbarController: BaseViewController {
     
-    static let shared = TabbarController(nibName: "TabbarController", bundle: .main)
+    static let hideNotificationName = Notification.Name("hideTabbarNotif")
+    static let showNotificationName = Notification.Name("showTabbarNotif")
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet var imgViews: [UIImageView]!
     @IBOutlet var iconViews: [UIImageView]!
     @IBOutlet var iconLabels: [UILabel]!
+    @IBOutlet weak var stackView: UIStackView!
     
+    @IBOutlet weak var tabbarHeightConstraint: NSLayoutConstraint!
     var productViewController: ProductViewController!
     var usersViewController: UsersViewController!
     var ordersViewController: OrdersViewController!
@@ -31,6 +34,9 @@ class TabbarController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(onHideTabbar(notification:)), name: TabbarController.hideNotificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onShowTabbar(notification:)), name: TabbarController.showNotificationName, object: nil)
+        showTabbar()
         tabView.layer.shadowColor = UIColor.black.cgColor
         tabView.layer.shadowOpacity = 0.5
         tabView.layer.shadowOffset = CGSize(width: 0, height: 1)
@@ -62,14 +68,6 @@ class TabbarController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-    }
-    
-    func hideTabbar() {
-        
-    }
-    
-    func showTabbar() {
-        
     }
     
     @IBAction func didPressTab(_ sender: UIButton) {
@@ -111,4 +109,25 @@ class TabbarController: BaseViewController {
         
         
     }
+    func hideTabbar() {
+        self.tabbarHeightConstraint.constant = 0
+        tabView.isHidden = true
+        
+        tabView.layoutIfNeeded()
+    }
+    
+    func showTabbar() {
+        self.tabbarHeightConstraint.constant = 70
+        tabView.isHidden = false
+        tabView.layoutIfNeeded()
+    }
+    
+    @objc func onHideTabbar(notification: Notification) {
+       hideTabbar()
+    }
+    
+    @objc func onShowTabbar(notification: Notification) {
+        showTabbar()
+    }
+    
 }

@@ -9,11 +9,12 @@
 import UIKit
 
 class SetProductVC: UIViewController {
-
+    var photoShot : UIImage?
     @IBOutlet weak var picImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        picImageView.image = photoShot
         picImageView.layer.cornerRadius = 10
         
 
