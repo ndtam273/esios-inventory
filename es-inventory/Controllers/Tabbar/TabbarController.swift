@@ -9,6 +9,8 @@
 import UIKit
 
 class TabbarController: BaseViewController {
+    static let shared = TabbarController(nibName: "TabbarController", bundle: nil)
+    
     
     static let hideNotificationName = Notification.Name("hideTabbarNotif")
     static let showNotificationName = Notification.Name("showTabbarNotif")
@@ -25,6 +27,8 @@ class TabbarController: BaseViewController {
     var usersViewController: UsersViewController!
     var ordersViewController: OrdersViewController!
     
+    var isHideTabbar = false
+    
     @IBOutlet weak var tabView: UIView!
     var viewControllers : [UIViewController]!
     
@@ -36,7 +40,6 @@ class TabbarController: BaseViewController {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(onHideTabbar(notification:)), name: TabbarController.hideNotificationName, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(onShowTabbar(notification:)), name: TabbarController.showNotificationName, object: nil)
-        showTabbar()
         tabView.layer.shadowColor = UIColor.black.cgColor
         tabView.layer.shadowOpacity = 0.5
         tabView.layer.shadowOffset = CGSize(width: 0, height: 1)
@@ -64,6 +67,7 @@ class TabbarController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        showTabbar()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -112,6 +116,7 @@ class TabbarController: BaseViewController {
     func hideTabbar() {
         self.tabbarHeightConstraint.constant = 0
         tabView.isHidden = true
+        isHideTabbar = true
         
         tabView.layoutIfNeeded()
     }
@@ -119,6 +124,7 @@ class TabbarController: BaseViewController {
     func showTabbar() {
         self.tabbarHeightConstraint.constant = 70
         tabView.isHidden = false
+        isHideTabbar = false
         tabView.layoutIfNeeded()
     }
     

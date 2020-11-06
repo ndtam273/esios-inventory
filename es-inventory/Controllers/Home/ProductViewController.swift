@@ -11,7 +11,8 @@ import UIKit
 class ProductViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-
+    
+    @IBOutlet weak var botConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,19 +20,32 @@ class ProductViewController: BaseViewController, UITableViewDelegate, UITableVie
         tableView.register(nib, forCellReuseIdentifier: "productCell")
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.keyboardDismissMode = .onDrag
         setupUI()
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        if TabbarController.shared.isHideTabbar == true {
+            botConstraint.constant = 110
+            view.layoutIfNeeded()
+        }
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.post(name: TabbarController.showNotificationName, object: nil)
 
+        
+        
+        
+    }
     override func setupUI() {
         super.setupUI()
         title = App.Text.titleHome
+       
     }
     
     @IBAction func didAddProduct(_ sender: UIButton) {
         let cameraVC = CameraViewController()
         let notificationCenter = NotificationCenter.default
-        notificationCenter.post(name: TabbarController.notificationName, object: nil)
+        notificationCenter.post(name: TabbarController.hideNotificationName, object: nil)
         self.navigationController?.pushViewController(cameraVC, animated: false)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,4 +60,5 @@ class ProductViewController: BaseViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
+    
 }

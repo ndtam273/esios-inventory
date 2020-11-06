@@ -12,22 +12,65 @@ class UsersViewController: BaseViewController, UITableViewDelegate, UITableViewD
     
     
 
+    @IBOutlet weak var addUserBotConstraint: NSLayoutConstraint!
+    @IBOutlet weak var alphaView: UIView!
+    @IBOutlet weak var addUserView: UIView!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = App.Text.titleUsers
+        addUserView.layer.cornerRadius = 10
+        hidePopup()
+        
         let nib = UINib(nibName: "UserCell", bundle: .main)
         tableView.register(nib, forCellReuseIdentifier: "userCell")
         tableView.delegate = self
         tableView.dataSource = self
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func setupUI() {
-        super.viewDidLoad()
-        title = App.Text.titleUsers
+        tableView.keyboardDismissMode = .onDrag
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        
+        
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        hidePopup()
+    }
+
+//    override func setupUI() {
+//        super.viewDidLoad()
+//        
+//        
+//    }
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.addUserBotConstraint.constant < keyboardSize.height {
+                addUserBotConstraint.constant = keyboardSize.height
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        self.addUserBotConstraint.constant = 220
+    }
+    func showPopup() {
+        alphaView.isHidden = false
+        addUserView.isHidden = false
+    }
+    
+    func hidePopup() {
+        alphaView.isHidden = true
+        addUserView.isHidden = true
+    }
+    @IBAction func handleTapAlphaView(_ sender: Any) {
+        hidePopup()
+        view.endEditing(false)
+    }
+    @IBAction func didAddUser(_ sender: Any) {
+        showPopup()
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 40
     }
@@ -41,4 +84,5 @@ class UsersViewController: BaseViewController, UITableViewDelegate, UITableViewD
         return 50
     }
     
+
 }

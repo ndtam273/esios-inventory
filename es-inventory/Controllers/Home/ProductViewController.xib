@@ -16,6 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductViewController" customModule="es_inventory" customModuleProvider="target">
             <connections>
+                <outlet property="botConstraint" destination="V0f-oZ-TTh" id="GUv-tV-cbX"/>
                 <outlet property="tableView" destination="Qxv-TB-ew7" id="jby-So-8Aw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -161,8 +162,8 @@
                 <constraint firstItem="Mzw-e9-y9M" firstAttribute="top" secondItem="Gqi-5Z-Qwm" secondAttribute="bottom" constant="8" id="Ru9-Va-VUO"/>
                 <constraint firstAttribute="bottom" secondItem="Qxv-TB-ew7" secondAttribute="bottom" id="Tak-fA-kjs"/>
                 <constraint firstItem="EG2-ej-Xcf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Uvy-WW-Zxg"/>
+                <constraint firstAttribute="bottom" secondItem="z0V-oS-058" secondAttribute="bottom" constant="40" id="V0f-oZ-TTh"/>
                 <constraint firstItem="Gqi-5Z-Qwm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Wdh-OB-cNI"/>
-                <constraint firstItem="z0V-oS-058" firstAttribute="top" secondItem="Qxv-TB-ew7" secondAttribute="bottom" constant="-130" id="YZa-cY-ZNk"/>
                 <constraint firstAttribute="trailing" secondItem="Gqi-5Z-Qwm" secondAttribute="trailing" constant="16" id="fvN-zP-qhg"/>
                 <constraint firstItem="z0V-oS-058" firstAttribute="leading" secondItem="Qxv-TB-ew7" secondAttribute="trailing" constant="-100" id="giZ-Yi-Vdu"/>
                 <constraint firstItem="Qxv-TB-ew7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nhM-Fh-2cX"/>

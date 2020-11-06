@@ -9,19 +9,48 @@
 import UIKit
 
 class SetProductVC: UIViewController {
-    var photoShot : UIImage?
+    @IBOutlet weak var contentViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var picImageView: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    var photoShot : UIImage?
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        picImageView.image = photoShot
+        if let photoShot = photoShot {
+            picImageView.image = photoShot
+        }
+        
         picImageView.layer.cornerRadius = 10
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func didAddInformation(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    @IBAction func didBackToCamera(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            contentViewHeightConstraint.constant = keyboardSize.height
+            let bottomOffset = CGPoint(x: 0, y: contentViewHeightConstraint.constant)
+            scrollView.setContentOffset(bottomOffset, animated: true)
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        contentViewHeightConstraint.constant = 0
+        let topOffset = CGPoint(x: 0, y: -scrollView.contentInset.top + 20)
+        scrollView.setContentOffset(topOffset, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

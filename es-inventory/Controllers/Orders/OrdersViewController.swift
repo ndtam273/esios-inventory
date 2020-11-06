@@ -20,6 +20,7 @@ class OrdersViewController: BaseViewController, UITableViewDelegate, UITableView
         tableView.register(nib, forCellReuseIdentifier: "orderCell")
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.keyboardDismissMode = .onDrag
 
         // Do any additional setup after loading the view.
     }

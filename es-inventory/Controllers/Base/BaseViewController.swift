@@ -12,8 +12,15 @@ class BaseViewController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
 //        setupData()
 //        setupUI()
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     func setupData() {}

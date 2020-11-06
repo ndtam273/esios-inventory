@@ -73,7 +73,17 @@ class CameraViewController: BaseViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+
         self.captureSession.stopRunning()
+    }
+    
+    @IBAction func didBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    @IBAction func didSkip(_ sender: Any) {
+        takePicture = false
+        let setProductVC = SetProductVC()
+        self.navigationController?.pushViewController(setProductVC, animated: true)
     }
     
     //MARK:- Permissions
