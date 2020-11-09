@@ -134,14 +134,14 @@
                         <constraint firstItem="bnY-Op-MDU" firstAttribute="centerY" secondItem="Mzw-e9-y9M" secondAttribute="centerY" id="xqX-tr-y7f"/>
                     </constraints>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_product_btn" translatesAutoresizingMaskIntoConstraints="NO" id="z0V-oS-058">
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_product_btn" translatesAutoresizingMaskIntoConstraints="NO" id="z0V-oS-058">
                     <rect key="frame" x="314" y="766" width="90" height="90"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="90" id="KeQ-0x-g0U"/>
                         <constraint firstAttribute="width" constant="90" id="eWo-eZ-amV"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFY-FV-B42">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFY-FV-B42">
                     <rect key="frame" x="327" y="757" width="75" height="75"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="75" id="MHI-J7-7Nb"/>

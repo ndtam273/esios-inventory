@@ -12,6 +12,8 @@ class TabbarController: BaseViewController {
     static let shared = TabbarController(nibName: "TabbarController", bundle: nil)
     
     
+    @IBOutlet weak var floatingBtn: UIButton!
+    
     static let hideNotificationName = Notification.Name("hideTabbarNotif")
     static let showNotificationName = Notification.Name("showTabbarNotif")
     
@@ -40,12 +42,7 @@ class TabbarController: BaseViewController {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(onHideTabbar(notification:)), name: TabbarController.hideNotificationName, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(onShowTabbar(notification:)), name: TabbarController.showNotificationName, object: nil)
-        tabView.layer.shadowColor = UIColor.black.cgColor
-        tabView.layer.shadowOpacity = 0.5
-        tabView.layer.shadowOffset = CGSize(width: 0, height: 1)
-        tabView.layer.shadowRadius = 10
-        tabView.layer.masksToBounds = false
-        tabView.layer.shadowPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 5, height: 5)).cgPath
+       
         
         productViewController = ProductViewController(nibName: "ProductViewController", bundle: nil)
         let productNavi = BaseNavigationController(rootViewController: productViewController)

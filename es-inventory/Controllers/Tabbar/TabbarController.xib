@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="TabView" destination="130-vV-Q32" id="TTl-sh-v1z"/>
                 <outlet property="contentView" destination="WoE-H9-isX" id="o5c-gE-RPO"/>
+                <outlet property="floatingBtn" destination="EGc-xs-bWJ" id="H7O-yV-cUE"/>
                 <outlet property="stackView" destination="vYL-GL-qUK" id="HcD-gq-AMm"/>
                 <outlet property="tabView" destination="JqB-rh-E8e" id="L2e-AL-tia"/>
                 <outlet property="tabbarHeightConstraint" destination="GD7-Y2-8eS" id="0sS-E3-xIV"/>
@@ -40,6 +41,14 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="782"/>
                     <color key="backgroundColor" systemColor="systemGray3Color"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGc-xs-bWJ">
+                    <rect key="frame" x="299" y="701" width="90" height="95"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="PMO-Um-naO"/>
+                        <constraint firstAttribute="height" constant="95" id="TZe-aZ-i0x"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="add_product_btn"/>
+                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JqB-rh-E8e">
                     <rect key="frame" x="0.0" y="826" width="414" height="70"/>
                     <subviews>
@@ -184,12 +193,14 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="130-vV-Q32" firstAttribute="top" secondItem="EGc-xs-bWJ" secondAttribute="bottom" constant="40" id="0xA-qd-kkz"/>
                 <constraint firstItem="JqB-rh-E8e" firstAttribute="top" secondItem="WoE-H9-isX" secondAttribute="bottom" id="5hI-HK-rFv"/>
                 <constraint firstAttribute="bottom" secondItem="JqB-rh-E8e" secondAttribute="bottom" id="Eup-8A-R2v"/>
                 <constraint firstAttribute="trailing" secondItem="JqB-rh-E8e" secondAttribute="trailing" id="Rd7-Hd-1kA"/>
                 <constraint firstItem="WoE-H9-isX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RjJ-Zt-fo5"/>
                 <constraint firstItem="WoE-H9-isX" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ap5-rc-spv"/>
                 <constraint firstItem="JqB-rh-E8e" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ecP-9A-0Ot"/>
+                <constraint firstAttribute="trailing" secondItem="EGc-xs-bWJ" secondAttribute="trailing" constant="25" id="xlX-t6-A8Y"/>
                 <constraint firstItem="WoE-H9-isX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xpE-NS-Urp"/>
                 <constraint firstItem="WoE-H9-isX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ycB-E9-MpW"/>
             </constraints>
@@ -198,6 +209,7 @@
     </objects>
     <resources>
         <image name="activated" width="70" height="4"/>
+        <image name="add_product_btn" width="90" height="95"/>
         <image name="tabbar line" width="1.3333333730697632" height="15"/>
         <image name="tabbar_bg" width="420" height="68"/>
         <image name="tabbar_ic1" width="15.333333015441895" height="15.333333015441895"/>
