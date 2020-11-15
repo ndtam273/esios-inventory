@@ -10,9 +10,14 @@ import UIKit
 
 class OrdersViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var strDate = ""
     
-    
+    @IBOutlet weak var pickerView: UIDatePicker!
+    @IBOutlet weak var alphaView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var dateButtonLabel: UILabel!
+    @IBOutlet weak var pickerControlView: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,16 +26,51 @@ class OrdersViewController: BaseViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         tableView.keyboardDismissMode = .onDrag
-
+        
         // Do any additional setup after loading the view.
     }
-
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hideDatePicker()
+    }
+    
     override func setupUI() {
         super.setupUI()
         title = App.Text.titleOrders
     }
     
+    @IBAction func cancelPicker(_ sender: Any) {
+        hideDatePicker()
+    }
+    @IBAction func openDatePicker(_ sender: Any) {
+        showDatePicker()
+    }
+    @IBAction func acceptDate(_ sender: Any) {
+        let dateFormater = DateFormatter()
+        
+        dateFormater.dateStyle = DateFormatter.Style.medium
+        strDate = dateFormater.string(from: pickerView.date)
+        dateButtonLabel.text = strDate
+        hideDatePicker()
+    }
+    
+    @IBAction func alphaViewTap(_ sender: Any) {
+        alphaView.isHidden = true
+        pickerControlView.isHidden = true
+    }
+    func showDatePicker() {
+        alphaView.isHidden = false
+        pickerControlView.isHidden = false
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.post(name: TabbarController.hideNotificationName, object: nil)
+    }
+    
+    func hideDatePicker() {
+        alphaView.isHidden = true
+        pickerControlView.isHidden = true
+        
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 30
     }
@@ -43,5 +83,5 @@ class OrdersViewController: BaseViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
-
+    
 }

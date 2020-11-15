@@ -12,6 +12,7 @@ class UsersViewController: BaseViewController, UITableViewDelegate, UITableViewD
     
     
 
+    
     @IBOutlet weak var addUserBotConstraint: NSLayoutConstraint!
     @IBOutlet weak var alphaView: UIView!
     @IBOutlet weak var addUserView: UIView!
@@ -30,6 +31,15 @@ class UsersViewController: BaseViewController, UITableViewDelegate, UITableViewD
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        let screenHeight = screenSize.height
+        let floatButton = UIButton(frame: CGRect(x: 150, y: 550, width: 85, height: 90))
+        floatButton.frame.origin = CGPoint(x: screenWidth - 26 - floatButton.bounds.size.width , y: screenHeight - 150 - floatButton.bounds.size.height)
+        floatButton.setImage(UIImage(named: "add_user_btn.png"), for: .normal)
+        floatButton.addTarget(self, action: #selector(didAddUser), for: .touchUpInside)
+        self.view.insertSubview(floatButton, belowSubview: alphaView)
         
         
         
@@ -68,7 +78,7 @@ class UsersViewController: BaseViewController, UITableViewDelegate, UITableViewD
         hidePopup()
         view.endEditing(false)
     }
-    @IBAction func didAddUser(_ sender: Any) {
+    @objc func didAddUser() {
         showPopup()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

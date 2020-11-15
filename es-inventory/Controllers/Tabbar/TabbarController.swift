@@ -9,10 +9,9 @@
 import UIKit
 
 class TabbarController: BaseViewController {
+    
     static let shared = TabbarController(nibName: "TabbarController", bundle: nil)
     
-    
-    @IBOutlet weak var floatingBtn: UIButton!
     
     static let hideNotificationName = Notification.Name("hideTabbarNotif")
     static let showNotificationName = Notification.Name("showTabbarNotif")
@@ -70,6 +69,7 @@ class TabbarController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
+    
     
     @IBAction func didPressTab(_ sender: UIButton) {
         let previousIndex = selectedIndex

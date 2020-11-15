@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -81,13 +80,16 @@
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAS-jS-pnl">
                                     <rect key="frame" x="19.5" y="619.5" width="375" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="lessThanOrEqual" priority="250" constant="375" id="Zy7-ZV-j6N"/>
+                                    </constraints>
                                     <state key="normal" title="OK" backgroundImage="button"/>
                                     <connections>
-                                        <action selector="didAddInformation:" destination="-1" eventType="touchUpInside" id="BbG-QN-tuE"/>
+                                        <action selector="didAddInformation:" destination="-1" eventType="touchUpInside" id="r9K-xn-oEQ"/>
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="3Lk-am-uIa" firstAttribute="centerX" secondItem="AtQ-6B-1R6" secondAttribute="centerX" id="9Sn-G1-MBU"/>
                                 <constraint firstItem="e4H-FD-Tgl" firstAttribute="leading" secondItem="AtQ-6B-1R6" secondAttribute="leading" constant="20" symbolic="YES" id="A5v-Dc-7jN"/>
@@ -98,11 +100,12 @@
                                 <constraint firstItem="3Lk-am-uIa" firstAttribute="top" secondItem="AtQ-6B-1R6" secondAttribute="top" constant="20" id="MTz-fb-uDJ"/>
                                 <constraint firstItem="e4H-FD-Tgl" firstAttribute="top" secondItem="3Lk-am-uIa" secondAttribute="bottom" constant="27" id="N0g-Fr-axe"/>
                                 <constraint firstItem="jAS-jS-pnl" firstAttribute="top" secondItem="Cp4-aC-L2f" secondAttribute="bottom" constant="30" id="NbO-YG-zQp"/>
-                                <constraint firstItem="Cp4-aC-L2f" firstAttribute="width" secondItem="3Lk-am-uIa" secondAttribute="width" id="b7X-fx-NWR"/>
+                                <constraint firstItem="jAS-jS-pnl" firstAttribute="leading" secondItem="AtQ-6B-1R6" secondAttribute="leading" constant="19.5" id="XmT-gE-9mo"/>
+                                <constraint firstItem="jAS-jS-pnl" firstAttribute="width" secondItem="e1C-4A-iyD" secondAttribute="width" id="emP-wi-7Nr"/>
                                 <constraint firstItem="e1C-4A-iyD" firstAttribute="centerX" secondItem="AtQ-6B-1R6" secondAttribute="centerX" id="gA0-eb-Tbo"/>
+                                <constraint firstItem="Cp4-aC-L2f" firstAttribute="width" secondItem="e1C-4A-iyD" secondAttribute="width" id="jqt-DX-zy3"/>
+                                <constraint firstAttribute="trailing" secondItem="jAS-jS-pnl" secondAttribute="trailing" constant="19.5" id="pci-2Y-tYq"/>
                                 <constraint firstItem="Cp4-aC-L2f" firstAttribute="centerX" secondItem="AtQ-6B-1R6" secondAttribute="centerX" id="pg4-bG-1O1"/>
-                                <constraint firstItem="jAS-jS-pnl" firstAttribute="width" secondItem="3Lk-am-uIa" secondAttribute="width" id="qId-BI-vwq"/>
-                                <constraint firstItem="e1C-4A-iyD" firstAttribute="width" secondItem="3Lk-am-uIa" secondAttribute="width" id="vG3-eT-fEp"/>
                                 <constraint firstItem="e1C-4A-iyD" firstAttribute="top" secondItem="e4H-FD-Tgl" secondAttribute="bottom" constant="15" id="wHx-fY-rh3"/>
                             </constraints>
                         </view>
@@ -119,8 +122,7 @@
                     <viewLayoutGuide key="frameLayoutGuide" id="tP1-aI-64M"/>
                 </scrollView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="0pP-vL-OOg" secondAttribute="trailing" id="AfT-OH-ycK"/>
                 <constraint firstItem="0pP-vL-OOg" firstAttribute="top" secondItem="kTh-wj-1MM" secondAttribute="bottom" constant="24" id="JND-1s-5nv"/>
@@ -129,6 +131,7 @@
                 <constraint firstItem="kTh-wj-1MM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="pFe-MQ-DMC"/>
                 <constraint firstAttribute="bottom" secondItem="0pP-vL-OOg" secondAttribute="bottom" id="yMX-bU-oe4"/>
             </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="140.57971014492756" y="89.732142857142847"/>
         </view>
     </objects>
@@ -136,8 +139,5 @@
         <image name="button" width="375" height="44"/>
         <image name="no_image" width="306.66665649414062" height="306.66665649414062"/>
         <image name="retake_back" width="113" height="20"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
