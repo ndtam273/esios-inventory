@@ -32,7 +32,7 @@ class OrdersViewController: BaseViewController, UITableViewDelegate, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        hideDatePicker()
+        hidePickerShowTabbar()
     }
     
     override func setupUI() {
@@ -41,7 +41,7 @@ class OrdersViewController: BaseViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func cancelPicker(_ sender: Any) {
-        hideDatePicker()
+        hidePickerShowTabbar()
     }
     @IBAction func openDatePicker(_ sender: Any) {
         showDatePicker()
@@ -52,12 +52,12 @@ class OrdersViewController: BaseViewController, UITableViewDelegate, UITableView
         dateFormater.dateStyle = DateFormatter.Style.medium
         strDate = dateFormater.string(from: pickerView.date)
         dateButtonLabel.text = strDate
-        hideDatePicker()
+        hidePickerShowTabbar()
+        
     }
     
     @IBAction func alphaViewTap(_ sender: Any) {
-        alphaView.isHidden = true
-        pickerControlView.isHidden = true
+        hidePickerShowTabbar()
     }
     func showDatePicker() {
         alphaView.isHidden = false
@@ -66,11 +66,15 @@ class OrdersViewController: BaseViewController, UITableViewDelegate, UITableView
         notificationCenter.post(name: TabbarController.hideNotificationName, object: nil)
     }
     
-    func hideDatePicker() {
+    
+    func hidePickerShowTabbar() {
         alphaView.isHidden = true
         pickerControlView.isHidden = true
         
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.post(name: TabbarController.showNotificationName, object: nil)
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 30
     }
