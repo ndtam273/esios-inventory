@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -85,11 +86,11 @@
                                     </constraints>
                                     <state key="normal" title="OK" backgroundImage="button"/>
                                     <connections>
-                                        <action selector="didAddInformation:" destination="-1" eventType="touchUpInside" id="r9K-xn-oEQ"/>
+                                        <action selector="didAddInformation:" destination="-1" eventType="touchUpInside" id="d3G-7m-HR3"/>
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="3Lk-am-uIa" firstAttribute="centerX" secondItem="AtQ-6B-1R6" secondAttribute="centerX" id="9Sn-G1-MBU"/>
                                 <constraint firstItem="e4H-FD-Tgl" firstAttribute="leading" secondItem="AtQ-6B-1R6" secondAttribute="leading" constant="20" symbolic="YES" id="A5v-Dc-7jN"/>
@@ -104,6 +105,7 @@
                                 <constraint firstItem="jAS-jS-pnl" firstAttribute="width" secondItem="e1C-4A-iyD" secondAttribute="width" id="emP-wi-7Nr"/>
                                 <constraint firstItem="e1C-4A-iyD" firstAttribute="centerX" secondItem="AtQ-6B-1R6" secondAttribute="centerX" id="gA0-eb-Tbo"/>
                                 <constraint firstItem="Cp4-aC-L2f" firstAttribute="width" secondItem="e1C-4A-iyD" secondAttribute="width" id="jqt-DX-zy3"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="796" id="lE3-C1-1Pr"/>
                                 <constraint firstAttribute="trailing" secondItem="jAS-jS-pnl" secondAttribute="trailing" constant="19.5" id="pci-2Y-tYq"/>
                                 <constraint firstItem="Cp4-aC-L2f" firstAttribute="centerX" secondItem="AtQ-6B-1R6" secondAttribute="centerX" id="pg4-bG-1O1"/>
                                 <constraint firstItem="e1C-4A-iyD" firstAttribute="top" secondItem="e4H-FD-Tgl" secondAttribute="bottom" constant="15" id="wHx-fY-rh3"/>
@@ -122,7 +124,8 @@
                     <viewLayoutGuide key="frameLayoutGuide" id="tP1-aI-64M"/>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="0pP-vL-OOg" secondAttribute="trailing" id="AfT-OH-ycK"/>
                 <constraint firstItem="0pP-vL-OOg" firstAttribute="top" secondItem="kTh-wj-1MM" secondAttribute="bottom" constant="24" id="JND-1s-5nv"/>
@@ -131,7 +134,6 @@
                 <constraint firstItem="kTh-wj-1MM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="pFe-MQ-DMC"/>
                 <constraint firstAttribute="bottom" secondItem="0pP-vL-OOg" secondAttribute="bottom" id="yMX-bU-oe4"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="140.57971014492756" y="89.732142857142847"/>
         </view>
     </objects>
@@ -139,5 +141,8 @@
         <image name="button" width="375" height="44"/>
         <image name="no_image" width="306.66665649414062" height="306.66665649414062"/>
         <image name="retake_back" width="113" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -27,7 +27,6 @@ class SetProductVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func didAddInformation(_ sender: Any) {
@@ -40,7 +39,7 @@ class SetProductVC: UIViewController {
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             contentViewHeightConstraint.constant = keyboardSize.height
-            let bottomOffset = CGPoint(x: 0, y: contentViewHeightConstraint.constant)
+            let bottomOffset = CGPoint(x: 0, y: contentViewHeightConstraint.constant + 16)
             scrollView.setContentOffset(bottomOffset, animated: true)
         }
     }
