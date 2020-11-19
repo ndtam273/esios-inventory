@@ -27,7 +27,7 @@ class ProductViewController: BaseViewController, UITableViewDelegate, UITableVie
         floatButton.frame.origin = CGPoint(x: screenWidth - 26 - floatButton.bounds.size.width , y: screenHeight - 150 - floatButton.bounds.size.height)
         floatButton.setImage(UIImage(named: "add_product_btn.png"), for: .normal)
         floatButton.addTarget(self, action: #selector(didAddProduct), for: .touchUpInside)
-        self.view.addSubview(floatButton)
+//        self.view.addSubview(floatButton)
         
         setupUI()
         // Do any additional setup after loading the view.
@@ -40,6 +40,9 @@ class ProductViewController: BaseViewController, UITableViewDelegate, UITableVie
         super.setupUI()
         title = App.Text.titleHome
        
+    }
+    @IBAction func didAddProductButton(_ sender: Any) {
+        didAddProduct()
     }
     
     @objc func didAddProduct() {

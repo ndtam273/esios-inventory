@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -50,7 +50,7 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_form" translatesAutoresizingMaskIntoConstraints="NO" id="Y4z-9M-xh6">
                             <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
                         </imageView>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXg-Hc-0N2">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="IXg-Hc-0N2">
                             <rect key="frame" x="20" y="0.0" width="312" height="50"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -132,6 +132,18 @@
                         <constraint firstItem="bnY-Op-MDU" firstAttribute="centerY" secondItem="Mzw-e9-y9M" secondAttribute="centerY" id="xqX-tr-y7f"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vch-ov-AYx">
+                    <rect key="frame" x="309" y="712" width="85" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="vch-ov-AYx" secondAttribute="height" multiplier="17:18" id="3kH-mo-szS"/>
+                        <constraint firstAttribute="width" constant="85" id="5Gi-VD-k3f"/>
+                        <constraint firstAttribute="height" constant="90" id="c3e-GF-fH5"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="add_product_btn"/>
+                    <connections>
+                        <action selector="didAddProductButton:" destination="-1" eventType="touchUpInside" id="EnE-zv-lDV"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
@@ -143,9 +155,11 @@
                 <constraint firstItem="EG2-ej-Xcf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Uvy-WW-Zxg"/>
                 <constraint firstItem="Gqi-5Z-Qwm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Wdh-OB-cNI"/>
                 <constraint firstAttribute="trailing" secondItem="Gqi-5Z-Qwm" secondAttribute="trailing" constant="16" id="fvN-zP-qhg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vch-ov-AYx" secondAttribute="bottom" constant="60" id="iLR-4T-m8k"/>
                 <constraint firstItem="Qxv-TB-ew7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nhM-Fh-2cX"/>
                 <constraint firstItem="Mzw-e9-y9M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oLK-WK-6CO"/>
                 <constraint firstItem="Qxv-TB-ew7" firstAttribute="top" secondItem="Mzw-e9-y9M" secondAttribute="bottom" id="qdS-bU-2SM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vch-ov-AYx" secondAttribute="trailing" constant="20" id="ts4-PS-Dmc"/>
                 <constraint firstAttribute="trailing" secondItem="Mzw-e9-y9M" secondAttribute="trailing" id="xwV-8Z-rhH"/>
                 <constraint firstItem="Gqi-5Z-Qwm" firstAttribute="top" secondItem="EG2-ej-Xcf" secondAttribute="bottom" constant="12" id="zRa-gh-9wT"/>
             </constraints>
@@ -154,6 +168,7 @@
         </view>
     </objects>
     <resources>
+        <image name="add_product_btn" width="90" height="95"/>
         <image name="search_form" width="375" height="50"/>
     </resources>
 </document>
